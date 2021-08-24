@@ -1,0 +1,81 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄 </a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/playerlist/">玩家列表</a></li>
+    <li><a href="/member/vip/">VIP組織圖</a></li>
+  </ul>
+</li>
+<li><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li class="active"><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+{% block content %}
+<div class="container-fluid px-3">
+  <p class="my-3 text-danger">公告管理</p>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-row ml-3">
+      <div class="form-group col-md-2 form-check-inline">
+        <input class="form-check-input" type="radio" name="receiver" id="inlineCheckbox1" value="1" checked='true'>
+        <label class="form-check-label" for="inlineCheckbox1">玩家</label>
+      </div>
+      <div class="form-group col-md-2 form-check-inline">
+        <input class="form-check-input" type="radio" name="receiver" id="inlineCheckbox2" value="2">
+        <label class="form-check-label" for="inlineCheckbox2">全部玩家</label>
+      </div>
+    
+      <div class="form-group col-md-7 form-check-inline">
+        <input class="form-control clear" type="text"  id="inputID">
+      </div>
+    </div>
+    <div class="form-row ml-3">
+      <div class="form-group col-md-4">
+      </div>
+      <div class="form-group col-md-7 ml-4 form-check-inline">
+        <span class="text-default text-danger help-block-none">※ ID與ID之間加上「,」可以同時發送給複數給複數會員.</span>
+      </div>
+    
+    </div>
+    <div class="form-row ml-3 mr-3">
+      <div class="form-group col-md-12">
+        <input class="form-control clear" type="text"  id="inputSubject" placeholder="請輸入主題">
+        <textarea class="my-2 form-control clear" rows="10" id="message" placeholder="請輸入500字以內的內容"></textarea>
+      </div>
+
+    </div>
+    
+    <div class="ml-3 mt-3 btn-group" role="group">
+      <button type="button" class="btn mr-2 btn-primary" id="btnSend"><i class="far fa-envelope"></i>發送</button>
+      <button type="button" class="btn btn-dark" id="btnClear">清除</button>
+    </div>
+  </form>
+
+</div>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- custom js -->
+<script src="{% static 'member/js/bulletin.js' %}"></script>
+{% endblock extra_scripts %}

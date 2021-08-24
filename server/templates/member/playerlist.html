@@ -1,0 +1,160 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- bootstrap datetimepicker -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}"/>
+<!-- bootstrap-table -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table.css' %}">
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table-pagejump.css' %}">
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄 </a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled show">
+    <li class="active"><a href="/member/playerlist/">玩家列表</a></li>
+    <li><a href="/member/vip/">VIP組織圖</a></li>    
+  </ul>
+</li>                    
+<li><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <p>
+    <span class="my-3 text-danger">玩家資訊</span>
+    <span class="my-3 text-secondary"> > </span>
+    <span class="my-3 text-danger">玩家列表</span>
+  </p>
+  <div class="row">
+    <div class="col px-1">
+      <div class="card text-white bg-primary mb-3 rounded">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0" id = "all_count">{{ all_count }}</h1>
+          <p class="card-text text-white">會員總人數</p>
+        </div>
+      </div>
+    </div>
+    <div class="col px-1">
+      <div class="card text-white mb-3 rounded" style="background-color:#3647FF">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0" id = "this_year_count">{{ this_year_count }}</h1>
+          <p class="card-text text-white">今年遊玩人數</p>
+        </div>
+      </div>
+    </div>
+    <div class="col px-1">
+      <div class="card text-white mb-3 rounded" style="background-color:#0BC2FD">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0" id = "this_month_count">{{ this_month_count }}</h1>
+          <p class="card-text text-white">本月遊玩人數</p>
+        </div>
+      </div>
+    </div>
+    <div class="col px-1">
+      <div class="card text-white bg-dark mb-3 rounded">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0" id = "today_registers">{{ today_registers }}</h1>
+          <p class="card-text text-white">本日註冊人數</p>
+        </div>
+      </div>
+    </div>
+    <div class="col px-1">
+      <div class="card text-white mb-3 rounded" style="background-color:#FF8800">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0" id = "day_avg_count">{{ day_avg_count }}</h1>
+          <p class="card-text text-white">每日平均上線人數</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form action="" method="GET">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="startTime1" class="mr-2 form-control-md">開始時間</label>
+            <input type="text" class="form-control " id="startTime1" name = "startTime1" placeholder="請選擇開始時間">
+            <label for="endTime1" class="ml-3 mr-2 form-control-md">結束時間</label>
+            <input type="text" class="form-control " id="endTime1" name = "endTime1" placeholder="請選擇結束時間">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group input-group-md mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroup-sizing-md">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <input type="text" class="form-control form-control-md" id="args"  name = "args" placeholder="請輸入ID、手機號或暱稱">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <button type="button" style="width:100%" class="btn btn-primary btn-md" id="btnQuery">查詢</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="page-container table-responsive-md">
+    <table id="table1">
+      <tbody>
+        {% for data1 in rs1 %}
+        <tr>
+          <td>{{ data1.id }}</td>
+          <td>{{ data1.nick_name }}</td>
+          <td>{{ data1.gold }}</td>
+          <td>{{ data1.star }}</td>
+          <td>{{ data1.phone_number }}</td>
+          <td>{{ data1.register_mac_addr }}</td>
+          <td>{{ data1.bind_playerid }}</td>
+          <td>{{ data1.bind_playername }}</td>
+          <td>{{ data1.history_game_runs }}</td>
+          <td>{{ data1.score }}</td>
+          <td>{{ data1.last_login_date }}</td>
+          <td>{{ data1.created_date }}</td>
+          <td>{{ data1.player_type }}</td>
+          <td>{{ data1.permission_type }}</td>
+          <td>{{ data1.state }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- bootstrap-table js -->
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table-pagejump.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/locale/bootstrap-table-zh-TW.js' %}"></script>
+<!-- bootstrap datetimepicker -->
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/moment-with-locales.min.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'member/js/datetimepicker.js' %}"></script>
+<!-- custom js -->
+<script src="{% static 'member/js/playerlist.js' %}"></script>
+{% endblock extra_scripts %}

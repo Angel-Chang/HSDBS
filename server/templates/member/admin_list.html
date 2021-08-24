@@ -1,0 +1,187 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- bootstrap-table -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table.css' %}">
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table-pagejump.css' %}">
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄 </a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/playerlist/">玩家列表</a></li>
+    <li><a href="/member/vip/">VIP組織圖</a></li>
+  </ul>
+</li>
+<li><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li class="active"><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled show">
+    <li class="active"><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <p class="my-3 text-danger">管理員列表</p>
+  <div class="row mb-3">
+    <div class="col-md">
+      <button class="btn btn-lg" style="background-color: #FFBE00;width:100%;" 
+        data-toggle="modal" data-target="#detail" data-title="新增管理員" data-action="C" id="create">
+        新增管理員
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md">
+      <div class="card text-white bg-primary mb-3 rounded">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0">{{ sys_boss_count }}</h1>
+          <p class="card-text text-white">系統主管人數</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="card text-white mb-3 rounded" style="background-color:#3647FF">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0">{{ rep_boss_count }}</h1>
+          <p class="card-text text-white">客服主管人數</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="card text-white mb-3 rounded" style="background-color:#0BC2FD">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0">{{ rep_count }}</h1>
+          <p class="card-text text-white">一般客服人數</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form action="" method="GET">
+    <div class="row mb-3">
+      <div class="col-md-8">
+        <div class="input-group input-group-md mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroup-sizing-md">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <input type="text" class="form-control form-control-md" id="args"  name = "args" placeholder="請輸入ID、手機號碼或管理員名稱">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <button type="button" style="width:100%" class="btn btn-primary btn-md" id="btnQuery">查詢</button>
+      </div>
+    </div>
+  </form>
+  <div class="page-container">
+    <table id="table1">
+      <tbody>
+        {% for data1 in rs1 %}
+        <tr>
+          <td>{{ data1.id }}</td>
+          <td>{{ data1.user_account }}</td>
+          <td>{{ data1.user_password }}</td>
+          <td>{{ data1.user_name }}</td>
+          <td>{{ data1.phone_number }}</td>
+          <td>{{ data1.last_login_date }}</td>
+          <td>{{ data1.level }}</td>
+          <td>{{ data1.level_name }}</td>
+          <td>{{ data1.action }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- 新增/更新 modal -->
+<div id="detail" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+      </div>
+      <form action=""  method="POST">
+        {% csrf_token %}
+        <div class="modal-body">
+          <input type="hidden" name="operate" id="operate" value='C'>
+          <input type="hidden" name="uid" id="uid">
+          <div class="form-group row mb-2">
+            <label for="user_account" class="col-md-5 text-right">帳號</label>
+            <div class="col-md-6">
+              <input type="text" class="clear form-control" id="user_account" name = "user_account">
+            </div>
+          </div>
+          <div class="form-group row mb-2">
+            <label for="user_password" class="col-md-5 text-right">密碼</label>
+            <div class="col-md-6">
+              <input type="text" class="clear form-control" id="user_password" name = "user_password">
+            </div>
+          </div>
+          <div class="form-group row mb-2">
+            <label for="user_name" class="col-md-5 text-right">管理員名稱</label>
+            <div class="col-md-6">
+              <input type="text" class="clear form-control" id="user_name" name = "user_name">
+            </div>
+          </div>
+          <div class="form-group row mb-2">
+            <label for="phone_number" class="col-md-5 text-right">手機號碼</label>
+            <div class="col-md-6">
+              <input type="text" class="clear form-control" id="phone_number" name = "phone_number">
+            </div>
+          </div>
+
+          <div class="form-group row mb-2">
+            <label for="level" class="col-md-5 text-right">系統身份</label>
+            <div class="col-md-6">
+              <select class="clear custom-select" id="level" name = "level">
+                <option selected></option>
+                <option value="1">代理玩家</option>
+                <option value="2">一般客服</option>
+                <option value="3">客服主管</option>
+                <option value="8">系統主管</option>
+                <option value="9">工程師</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary submit" id="btnSave">確定</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- bootstrap-table js -->
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table-pagejump.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/locale/bootstrap-table-zh-TW.js' %}"></script>
+<!-- custom js -->
+<script src="{% static 'member/js/admin_list.js' %}"></script>
+{% endblock extra_scripts %}

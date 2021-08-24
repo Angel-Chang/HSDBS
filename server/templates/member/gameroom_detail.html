@@ -1,0 +1,187 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- bootstrap datetimepicker -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}"/>
+<!-- bootstrap-table -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table.css' %}">
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table-pagejump.css' %}">
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄 </a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/playerlist/">玩家列表</a></li>
+    <li><a href="/member/vip/">VIP組織圖</a></li>
+  </ul>
+</li>
+<li class="active"><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled show">
+    <li class="active"><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <p>
+    <span class="my-3 text-danger">遊戲資訊</span>
+    <span class="my-3 text-secondary"> > </span>
+    <span class="my-3 text-danger">牌局紀錄</span>
+    <span class="my-3 text-secondary"> > </span>
+    <span class="my-3 text-danger">牌局詳細內容</span>
+  </p>
+  <div class="page-container">
+    <form action="" method="GET">
+      <input type="hidden" id="room_id">
+      <input type="hidden" id="player_name1" value= {{ player1_name }} > 
+      <input type="hidden" id="player_name2" value= {{ player2_name }} >
+      <input type="hidden" id="player_name3" value= {{ player3_name }} >
+      <input type="hidden" id="player_name4" value= {{ player4_name }} >
+      <div class="row">
+        <div class="col-md-2">
+          <p>{{ game_time }}</p>
+        </div>
+        <div class="col-md-2">
+          <p>房號：{{ game_room }}</p>
+        </div>        
+        <div class="col-md-6">
+          <p>
+            遊戲狀態：
+            {% if room_state == "進行中" %}
+              <span class="text-danger">進行中</span>
+            {% else %}
+            <span class="text-primary">{{ room_state }}</span>
+            {% endif %}
+          </p>
+        </div>
+      </div>  
+    </form>
+    <table id="table1">
+      <tbody>
+        <!-- 匯總 -->
+        {% for data2 in summary %}
+        <tr>
+          <td>{{ data2.seqno }}</td>
+          <td>{{ data2.id }}</td>
+          <td>{{ data2.start_time }}</td>
+          <td>{{ data2.desc }}</td>
+
+          <td>{{ data2.player1_win_str }}</td>
+          <td>{{ data2.player1_gold_flow }}</td>
+          <td>{{ data2.player1_win_lost }}</td>
+          <td>{{ data2.player1 }}</td>
+
+          <td>{{ data2.player2_win_str }}</td>
+          <td>{{ data2.player2_gold_flow }}</td>
+          <td>{{ data2.player2_win_lost }}</td>
+          <td>{{ data2.player2 }}</td>
+
+          <td>{{ data2.player3_win_str }}</td>
+          <td>{{ data2.player3_gold_flow }}</td>
+          <td>{{ data2.player3_win_lost }}</td>
+          <td>{{ data2.player3 }}</td>
+
+          <td>{{ data2.player4_win_str }}</td>
+          <td>{{ data2.player4_gold_flow }}</td>
+          <td>{{ data2.player4_win_lost }}</td>
+          <td>{{ data2.player4 }}</td>
+          <td>{{ data2.corp_bonus }}</td>
+        </tr>
+        {% endfor %}
+        <!-- 明細 -->
+        {% for data1 in rs1 %}
+        <tr>
+          <td>{{ data1.seqno }}</td>
+          <td>{{ data1.id }}</td>
+          <td>{{ data1.start_time }}</td>
+          <td>{{ data1.desc }}</td>
+
+          <td>{{ data1.player1_win_str }}</td>
+          <td>{{ data1.player1_gold_flow }}</td>
+          <td>{{ data1.player1_win_lost }}</td>
+          <td>{{ data1.player1 }}</td>
+
+          <td>{{ data1.player2_win_str }}</td>
+          <td>{{ data1.player2_gold_flow }}</td>
+          <td>{{ data1.player2_win_lost }}</td>
+          <td>{{ data1.player2 }}</td>
+
+          <td>{{ data1.player3_win_str }}</td>
+          <td>{{ data1.player3_gold_flow }}</td>
+          <td>{{ data1.player3_win_lost }}</td>
+          <td>{{ data1.player3 }}</td>
+
+          <td>{{ data1.player4_win_str }}</td>
+          <td>{{ data1.player4_gold_flow }}</td>
+          <td>{{ data1.player4_win_lost }}</td>
+          <td>{{ data1.player4 }}</td>
+          <td>{{ data1.corp_bonus }}</td>
+        </tr>
+        {% endfor %}
+        <!-- footer -->
+        {% for data3 in footer %}
+        <tr>
+          <td>{{ data3.seqno }}</td>
+          <td>{{ data3.id }}</td>
+          <td>{{ data3.start_time }}</td>
+          <td>抽水</td>
+
+          <td>{{ data3.player1_win_str }}</td>
+          <td>{{ data3.player1_gold_flow }}</td>
+          <td>{{ data3.player1_win_lost }}</td>
+          <td>{{ data3.player1 }}</td>
+
+          <td>{{ data3.player2_win_str }}</td>
+          <td>{{ data3.player2_gold_flow }}</td>
+          <td>{{ data3.player2_win_lost }}</td>
+          <td>{{ data3.player2 }}</td>
+
+          <td>{{ data3.player3_win_str }}</td>
+          <td>{{ data3.player3_gold_flow }}</td>
+          <td>{{ data3.player3_win_lost }}</td>
+          <td>{{ data3.player3 }}</td>
+
+          <td>{{ data3.player4_win_str }}</td>
+          <td>{{ data3.player4_gold_flow }}</td>
+          <td>{{ data3.player4_win_lost }}</td>
+          <td>{{ data3.player4 }}</td>
+          <td>{{ data3.corp_bonus }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- bootstrap-table js -->
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table-pagejump.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/locale/bootstrap-table-zh-TW.js' %}"></script>
+<!-- bootstrap datetimepicker -->
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/moment-with-locales.min.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'member/js/datetimepicker.js' %}"></script>
+<!-- custom js -->
+<script src="{% static 'member/js/gameroom_detail.js' %}"></script>
+{% endblock extra_scripts %}

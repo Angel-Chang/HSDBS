@@ -1,0 +1,262 @@
+{% extends "member/playerbase.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- bootstrap datetimepicker -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}"/>
+<!-- bootstrap-table -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table.css' %}">
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table-pagejump.css' %}">
+
+{% endblock extra_head %}
+
+{% block sidemenu %}                 
+<li><a href="{% url 'playerindex' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li class="active"><a href="/member/player1/"> <i class="fas fa-user"></i>玩家資訊</a></li>
+<li><a href="/member/playervip/"><i class="fa fa-sitemap"> </i>VIP組織圖</a></li>
+
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <p>
+    <span class="my-3 text-danger">玩家資訊</span>
+  </p>
+  <div class="row my-3">
+    <div class="col">
+      <span class = "mx-3 text-secondary">玩家名稱</span>
+      <h1 class = "mx-3 text-dark" id="player_name">
+        {{ data.nick_name }} ( {{ data.id }} )
+      </h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">Line ID</span>
+      <h1 class = "mx-3 text-dark" id="player_lineId">
+        {{ data.line_id }}
+      </h1>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <span class = "mx-3 text-secondary">推薦人</span>
+      <h1 class = "mx-3 text-blue" id="bind_playername">
+        {% if data.bind_playername != '' %}
+          {{ data.bind_playername }}
+        {% else %}
+          無
+        {% endif %}
+      </h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">會員狀態 / 身份</span>
+      <h1>
+        {% if data.state == '1' %}
+          <span class = "mx-3 text-danger" id="state">鎖定
+        {% else %}
+          <span class = "mx-3 text-dark" id="state">正常
+        {% endif %}  
+        </span> / 
+        <span class = "mx-3 text-dark" id="permission_type">{{ data.permission_type }}</span>
+      </h1>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col">
+      <span class = "mx-3 text-secondary">上線時間</span>
+      <h1 class = "mx-3 text-dark" id="last_login_date">{{ data.last_login_date }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">註冊時間</span>
+      <h1 class = "mx-3 text-dark" id="created_date">{{ data.created_date }}</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <span class = "mx-3 text-secondary">持有金額</span>
+      <h1 class = "mx-3 text-dark" id="gold">$ {{ data.gold }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">正負分</span>
+      <h1 class = "mx-3 text-dark" id="score">{{ data.score }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">歷史場次</span>
+      <h1 class = "mx-3 text-dark" id="history_game_runs">{{ data.history_game_runs }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">鑽石</span>
+      <h1 class = "mx-3 text-dark" id="star">◈ {{ data.star }}</h1>
+    </div>
+  </div>
+  <!-- page info -->
+  <div class="page-container">
+    <form action="" method="GET">
+      <div class="row mb-3">
+        <div class="col-md-9">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="startTime1" class="mr-2 form-control-md">開始時間</label>
+              <input type="text" class="form-control " id="startTime1" name = "startTime1" placeholder="請選擇開始時間">
+              <label for="endTime1" class="ml-3 mr-2 form-control-md">結束時間</label>
+              <input type="text" class="form-control " id="endTime1" name = "endTime1" placeholder="請選擇結束時間">
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3 ml-auto">
+          <button type="button" style="width:100%" class="btn btn-primary btn-md" id="btnQuery">查詢</button>
+        </div>
+      </div>
+    </form>
+    <!-- tab -->
+    <ul class="nav nav-pills flex-column flex-sm-row nav-fill mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center active" id="p1-tab" data-toggle="pill" href="#p1" role="tab" aria-controls="p1" aria-selected="true">登入紀錄</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p2-tab" data-toggle="pill" href="#p2" role="tab" aria-controls="p2" aria-selected="false">轉幣紀錄</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p3-tab" data-toggle="pill" href="#p3" role="tab" aria-controls="p3" aria-selected="false">補幣紀錄</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p4-tab" data-toggle="pill" href="#p4" role="tab" aria-controls="p4" aria-selected="false">金流異動</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p5-tab" data-toggle="pill" href="#p5" role="tab" aria-controls="p5" aria-selected="false">鑽石異動</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p6-tab" data-toggle="pill" href="#p6" role="tab" aria-controls="p6" aria-selected="false">歷史場次</a>
+      </li>
+
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="p1" role="tabpanel" aria-labelledby="p1-tab">
+        <!-- 登入紀錄 -->
+        <table id="table1">
+          <tbody>
+            {% for data1 in rs1 %}
+            <tr>
+              <td>{{ data1.id }}</td>
+              <td>{{ data1.login_ip }}</td>
+              <td>{{ data1.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
+      </div>
+      <div class="tab-pane fade" id="p2" role="tabpanel" aria-labelledby="p2-tab">
+        <!-- 轉幣紀錄 -->
+        <table id="table2">
+          <tbody>
+            {% for data2 in rs2 %}
+            <tr>
+              <td>{{ data2.id }}</td>
+              <td>{{ data2.jewel }}</td>
+              <td>{{ data2.sender_id }}</td>
+              <td>{{ data2.sender }}</td>
+              <td>{{ data2.sender_gold }}</td>
+              <td>{{ data2.receiver_id }}</td>
+              <td>{{ data2.receiver }}</td>
+              <td>{{ data2.receiver_gold }}</td>
+              <td>{{ data2.amount }}</td>
+              <td>{{ data2.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
+      </div>
+      <div class="tab-pane fade" id="p3" role="tabpanel" aria-labelledby="p3-tab">
+        <!-- 補幣紀錄 -->
+        <table id="table3">
+          <tbody>
+            {% for data3 in rs3 %}
+            <tr>
+              <td>{{ data3.id }}</td>
+              <td>{{ data3.jewel }}</td>
+              <td>{{ data3.admin_account }}</td>
+              <td>{{ data3.gold }}</td>
+              <td>{{ data3.description }}</td>
+              <td>{{ data3.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
+      </div>
+
+      <div class="tab-pane fade" id="p4" role="tabpanel" aria-labelledby="p4-tab">
+        <!-- 金流異動 -->
+        <table id="table4">
+          <tbody>
+            {% for data4 in rs4 %}
+            <tr>
+              <td>{{ data4.id }}</td>
+              <td>{{ data4.tradetype }}</td>
+              <td>{{ data4.amount }}</td>
+              <td>{{ data4.goldflow }}</td>
+              <td>{{ data4.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="p5" role="tabpanel" aria-labelledby="p5-tab">
+        <!-- 鑽石異動 -->
+        <table id="table6">
+          <tbody>
+            {% for data6 in rs6 %}
+            <tr>
+              <td>{{ data6.id }}</td>
+              <td>{{ data6.star_type }}</td>
+              <td>{{ data6.star }}</td>
+              <td>{{ data6.starflow }}</td>
+              <td>{{ data6.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="p6" role="tabpanel" aria-labelledby="p6-tab">
+        <!-- 歷史場次 -->
+        <table id="table5">
+          <tbody>
+            {% for data5 in rs5 %}
+            <tr>
+              <td>{{ data5.gametype }}</td>
+              <td>{{ data5.run_id }}</td>
+              <td>{{ data5.area }}</td>
+              <td>{{ data5.created_date }}</td>
+              <!-- <td>{{ data5.detail }}</td> -->
+              <td>{{ data5.state }}</td>
+              <td>{{ data5.all_bonus }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- bootstrap-table js -->
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table-pagejump.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/locale/bootstrap-table-zh-TW.js' %}"></script>
+<!-- bootstrap datetimepicker -->
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/moment-with-locales.min.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'member/js/datetimepicker.js' %}"></script>
+<!-- custom js -->
+<script src="{% static 'member/js/player1.js' %}"></script>
+
+<script>
+  $(function () {
+    $('#pills-tab li:first-child a').tab('show')
+  })
+</script>
+{% endblock extra_scripts %}

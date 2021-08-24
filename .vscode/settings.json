@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "/usr/local/bin/python3",
+    "liveServer.settings.port": 5501,
+    "python.analysis.disabled": [
+        "unresolved-import",
+        "undefined-variable"
+    ],
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ]
+}

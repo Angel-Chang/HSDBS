@@ -1,0 +1,1455 @@
+[INFO        ] 2021-03-22 11:26:29 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO        ] 2021-03-22 11:26:38 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/happycity/__init__.py changed, reloading.
+[DEBUG       ] 2021-03-22 11:26:38 | asyncio:58 | Using selector: KqueueSelector
+[INFO        ] 2021-03-22 11:26:39 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO        ] 2021-03-22 11:26:46 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-22 11:28:37 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-22 11:29:31 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-22 11:30:00 | django.request:228 | Not Found: /gamercore/get_player_jewels/100001/
+[WARNING ] 2021-03-22 11:30:41 | django.request:228 | Not Found: /gamercore/get_player_jewels/100001/
+[WARNING ] 2021-03-22 11:30:56 | django.request:228 | Unauthorized: /gamecore/get_player_jewels/100001/
+[INFO    ] 2021-03-22 11:33:58 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-22 12:03:12 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 08:51:00 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 08:51:37 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-25 08:53:41 | django.request:228 | Not Found: /member/vip_store_value/100005/1/
+[WARNING ] 2021-03-25 08:54:02 | django.request:228 | Unauthorized: /gamecore/vip_store_value/100005/1/
+[WARNING ] 2021-03-25 08:54:41 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[INFO    ] 2021-03-25 09:02:05 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 09:02:07 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 09:02:17 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:02:26 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[INFO    ] 2021-03-25 09:07:01 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:07:09 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:07:14 | django.request:228 | Internal Server Error: /gamecore/vip_store_value/100005/1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3491, in put
+    Helpers().procPlayerStar(player_id, 99999999, "1", star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1356, in procPlayerStar
+    self.client_playerValue(player_id,1,matched.star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 664, in client_playerValue
+    rsp_code = result['code']
+TypeError: 'Response' object is not subscriptable
+[INFO    ] 2021-03-25 09:10:39 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 09:10:40 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 09:10:45 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:10:51 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:10:53 | django.request:228 | Internal Server Error: /gamecore/vip_store_value/100005/1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3492, in put
+    Helpers().procPlayerStar(player_id, 99999999, "1", star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1357, in procPlayerStar
+    self.client_playerValue(player_id,1,matched.star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 665, in client_playerValue
+    rsp_code = result['code']
+TypeError: 'Response' object is not subscriptable
+[INFO    ] 2021-03-25 09:27:32 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:27:41 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:27:45 | django.request:228 | Internal Server Error: /gamecore/vip_store_value/100005/1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 666, in client_playerValue
+    rsp_code = result['code']
+TypeError: 'Response' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3496, in put
+    Helpers().procPlayerStar(player_id, 99999999, "1", star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1361, in procPlayerStar
+    self.client_playerValue(player_id,1,matched.star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 671, in client_playerValue
+    logger1.error("[client_playerValue]result:"+result)
+TypeError: can only concatenate str (not "Response") to str
+[INFO    ] 2021-03-25 09:29:19 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 09:29:20 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:29:34 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:29:36 | django.request:228 | Internal Server Error: /gamecore/vip_store_value/100005/1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 667, in client_playerValue
+    logger1.error("[client_playerValue]result:"+result)
+TypeError: can only concatenate str (not "Response") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3498, in put
+    Helpers().procPlayerStar(player_id, 99999999, "1", star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1363, in procPlayerStar
+    self.client_playerValue(player_id,1,matched.star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 673, in client_playerValue
+    logger1.error("[client_playerValue]result:"+result)
+TypeError: can only concatenate str (not "Response") to str
+[INFO    ] 2021-03-25 09:29:58 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 09:29:59 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 09:30:04 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:30:08 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-25 09:30:20 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:30:22 | django.request:228 | Internal Server Error: /gamecore/vip_store_value/100005/1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 667, in client_playerValue
+    logger1.error("[client_playerValue]result:"+result)
+TypeError: can only concatenate str (not "Response") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3498, in put
+    Helpers().procPlayerStar(player_id, 99999999, "1", star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1363, in procPlayerStar
+    self.client_playerValue(player_id,1,matched.star)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 673, in client_playerValue
+    logger1.error("[client_playerValue]result:"+result)
+TypeError: can only concatenate str (not "Response") to str
+[INFO    ] 2021-03-25 09:31:02 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 09:31:03 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 09:31:12 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 09:31:13 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 09:31:17 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:31:21 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:31:24 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:24 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:25 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:25 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:25 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:26 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:26 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[ERROR   ] 2021-03-25 09:31:27 | gamecore.views:668 | [client_playerValue]result:<Response [404]>
+[INFO    ] 2021-03-25 09:40:30 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 09:40:44 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 09:40:50 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:50 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:51 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:51 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:51 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:52 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:52 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 09:40:52 | gamecore.views:669 | [client_playerValue]exception.
+[INFO    ] 2021-03-25 11:50:07 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 11:50:23 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/urls.py changed, reloading.
+[INFO    ] 2021-03-25 11:50:24 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 11:50:28 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-25 11:50:47 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 11:50:50 | gamecore.views:1355 | [procPlayerStar]player_id:100005, old star:9552.50 
+[ERROR   ] 2021-03-25 11:50:50 | gamecore.views:1360 | [procPlayerStar]player_id:100005, new star:9542.50 
+[ERROR   ] 2021-03-25 11:50:50 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:1355 | [procPlayerStar]player_id:100005, old star:9552.50 
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:1360 | [procPlayerStar]player_id:100005, new star:9553.000000000000000027755576 
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:1355 | [procPlayerStar]player_id:100005, old star:9553.00 
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:1360 | [procPlayerStar]player_id:100005, new star:9553.500000000000000027755576 
+[ERROR   ] 2021-03-25 11:50:51 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:1355 | [procPlayerStar]player_id:100003, old star:14.75 
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:1360 | [procPlayerStar]player_id:100003, new star:15.25000000000000002775557562 
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:1355 | [procPlayerStar]player_id:100001, old star:23.75 
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:1360 | [procPlayerStar]player_id:100001, new star:24.00000000000000001387778781 
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:1355 | [procPlayerStar]player_id:100001, old star:24.00 
+[ERROR   ] 2021-03-25 11:50:52 | gamecore.views:1360 | [procPlayerStar]player_id:100001, new star:24.50000000000000002775557562 
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:1355 | [procPlayerStar]player_id:100000, old star:901.00 
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:1360 | [procPlayerStar]player_id:100000, new star:901.5000000000000000277555756 
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:1355 | [procPlayerStar]player_id:100001, old star:24.50 
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:1360 | [procPlayerStar]player_id:100001, new star:24.75000000000000001387778781 
+[ERROR   ] 2021-03-25 11:50:53 | gamecore.views:669 | [client_playerValue]exception.
+[INFO    ] 2021-03-25 11:56:34 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-25 11:56:36 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 11:56:45 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 11:56:51 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-25 11:56:55 | gamecore.views:1355 | [procPlayerStar]player_id:100005, old star:9553.50 
+[ERROR   ] 2021-03-25 11:56:55 | gamecore.views:1360 | [procPlayerStar]player_id:100005, new star:9543.50 
+[ERROR   ] 2021-03-25 11:56:55 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:1355 | [procPlayerStar]player_id:100005, old star:9543.50 
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:1360 | [procPlayerStar]player_id:100005, new star:9544.000000000000000027755576 
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:1355 | [procPlayerStar]player_id:100005, old star:9544.00 
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:1360 | [procPlayerStar]player_id:100005, new star:9544.500000000000000027755576 
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:1355 | [procPlayerStar]player_id:100003, old star:15.25 
+[ERROR   ] 2021-03-25 11:56:56 | gamecore.views:1360 | [procPlayerStar]player_id:100003, new star:15.75000000000000002775557562 
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:1355 | [procPlayerStar]player_id:100001, old star:24.75 
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:1360 | [procPlayerStar]player_id:100001, new star:25.00000000000000001387778781 
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:1355 | [procPlayerStar]player_id:100001, old star:25.00 
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:1360 | [procPlayerStar]player_id:100001, new star:25.50000000000000002775557562 
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:1355 | [procPlayerStar]player_id:100000, old star:901.50 
+[ERROR   ] 2021-03-25 11:56:57 | gamecore.views:1360 | [procPlayerStar]player_id:100000, new star:902.0000000000000000277555756 
+[ERROR   ] 2021-03-25 11:56:58 | gamecore.views:669 | [client_playerValue]exception.
+[ERROR   ] 2021-03-25 11:56:58 | gamecore.views:1355 | [procPlayerStar]player_id:100001, old star:25.50 
+[ERROR   ] 2021-03-25 11:56:58 | gamecore.views:1360 | [procPlayerStar]player_id:100001, new star:25.75000000000000001387778781 
+[ERROR   ] 2021-03-25 11:56:58 | gamecore.views:669 | [client_playerValue]exception.
+[INFO    ] 2021-03-25 15:22:24 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 15:22:28 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-25 15:26:35 | django.request:228 | Unauthorized: /gamecore/player_buychips/100001/1000/
+[INFO    ] 2021-03-25 15:30:04 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 15:38:58 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 15:40:53 | django.request:228 | Unauthorized: /gamecore/player_buychips/100001/1000/
+[WARNING ] 2021-03-25 15:57:04 | django.request:228 | Bad Request: /gamecore/player_buychips/1/1000/
+[INFO    ] 2021-03-25 16:03:06 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-25 16:03:18 | django.request:228 | Bad Request: /gamecore/player_buychips/1/1000/
+[INFO    ] 2021-03-25 16:26:39 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[ERROR   ] 2021-03-25 16:28:14 | django.request:228 | Internal Server Error: /gamecore/player_redeem/100001/1000/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 493, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 411, in initial
+    self.check_permissions(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/permissions.py", line 229, in has_permission
+    queryset = self._queryset(view)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/permissions.py", line 209, in _queryset
+    ).format(self.__class__.__name__)
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+[INFO    ] 2021-03-25 16:30:54 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-25 16:34:46 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-27 16:54:03 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 16:54:07 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-27 16:54:07 | django.request:228 | Not Found: /favicon.ico
+[INFO    ] 2021-03-27 17:01:27 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-03-27 17:01:29 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-27 17:57:30 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 17:57:33 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-27 17:57:39 | django.request:228 | Unauthorized: /gamecore/vip_store_value/100001/1/
+[WARNING ] 2021-03-27 17:58:08 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100001/1/
+[WARNING ] 2021-03-27 17:58:19 | django.request:228 | Not Found: /gamecore/
+[INFO    ] 2021-03-27 18:40:23 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 18:40:35 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-27 18:41:21 | django.request:228 | Not Found: /gamecore/gamecore/playerbyline/
+[WARNING ] 2021-03-27 18:41:39 | django.request:228 | Not Found: /gamecore/gamecore/playerbyline/aa@gmail.com/
+[WARNING ] 2021-03-27 18:41:56 | django.request:228 | Unauthorized: /gamecore/playerbyline/aa@gmail.com/
+[ERROR   ] 2021-03-27 18:41:57 | gamecore.views:1946 | [PlayerByLineDetailView]Line aa@gmail.com does not exist.
+[WARNING ] 2021-03-27 18:41:57 | django.request:228 | Bad Request: /gamecore/playerbyline/aa@gmail.com/
+[INFO    ] 2021-03-27 18:44:33 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 18:44:36 | django.request:228 | Not Found: /
+[ERROR   ] 2021-03-27 18:44:47 | gamecore.views:1946 | [PlayerByLineDetailView]Line aa@gmail.com does not exist.
+[WARNING ] 2021-03-27 18:44:47 | django.request:228 | Bad Request: /gamecore/playerbyline/aa@gmail.com/
+[INFO    ] 2021-03-27 18:47:01 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[ERROR   ] 2021-03-27 18:47:18 | django.request:228 | Internal Server Error: /gamecore/playerbyline/aa@gmail.com/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1940, in get
+    logger1.error("[PlayerByLineDetailView]"+request.data)
+TypeError: can only concatenate str (not "dict") to str
+[ERROR   ] 2021-03-27 18:47:23 | django.request:228 | Internal Server Error: /gamecore/playerbyline/aa@gmail.com/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1940, in get
+    logger1.error("[PlayerByLineDetailView]"+request.data)
+TypeError: can only concatenate str (not "dict") to str
+[INFO    ] 2021-03-27 18:48:36 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[ERROR   ] 2021-03-27 18:48:44 | gamecore.views:1941 | [PlayerByLineDetailView]{}
+[ERROR   ] 2021-03-27 18:48:44 | gamecore.views:1942 | [PlayerByLineDetailView]aa@gmail.com
+[ERROR   ] 2021-03-27 18:48:44 | gamecore.views:1949 | [PlayerByLineDetailView]Line aa@gmail.com does not exist.
+[WARNING ] 2021-03-27 18:48:44 | django.request:228 | Bad Request: /gamecore/playerbyline/aa@gmail.com/
+[INFO    ] 2021-03-27 18:56:21 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[ERROR   ] 2021-03-27 18:56:34 | gamecore.views:1941 | [PlayerByLineDetailView]aa@gmail.com
+[ERROR   ] 2021-03-27 18:56:34 | gamecore.views:1948 | [PlayerByLineDetailView]Line aa@gmail.com does not exist.
+[WARNING ] 2021-03-27 18:56:34 | django.request:228 | Bad Request: /gamecore/playerbyline/aa@gmail.com/
+[WARNING ] 2021-03-27 18:57:03 | django.request:228 | Unauthorized: /gamecore/new_ip/
+[WARNING ] 2021-03-27 18:57:04 | django.request:228 | Method Not Allowed: /gamecore/new_ip/
+[ERROR   ] 2021-03-27 18:57:32 | gamecore.views:2029 | [AddIPView]<QueryDict: {'csrfmiddlewaretoken': ['cpigrHNC4pNDMKJQWZyAhoMwAGj6Ad023IDaogVDW9a7HCXBpl9EXtXAa1iByFd1'], 'player_id': ['100000'], 'ip': ['11111111'], 'type': ['1'], 'mac_addr': ['12345678'], 'imei': ['12334566']}>
+[ERROR   ] 2021-03-27 18:57:32 | gamecore.views:2065 | [AddIPView]{'ip': [ErrorDetail(string='Enter a valid IPv4 or IPv6 address.', code='invalid')]}
+[WARNING ] 2021-03-27 18:57:32 | django.request:228 | Bad Request: /gamecore/new_ip/
+[ERROR   ] 2021-03-27 18:58:34 | gamecore.views:2029 | [AddIPView]<QueryDict: {'csrfmiddlewaretoken': ['OABcoLQcAnz51IhRsFWoQ18LGNoKHXwQFTW6lkYds7WzWAvCV1xsw6jPg8nfFpJP'], 'player_id': ['100000'], 'ip': ['127.0.0.1'], 'type': ['1'], 'mac_addr': ['12345678'], 'imei': ['12334566']}>
+[INFO    ] 2021-03-27 19:07:34 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-27 19:07:35 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-27 19:40:55 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 19:40:59 | django.request:228 | Not Found: /
+[INFO    ] 2021-03-27 23:00:06 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 23:00:10 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-27 23:00:44 | django.request:228 | Not Found: /member/vip_store_value/1000005/1/
+[WARNING ] 2021-03-27 23:00:53 | django.request:228 | Unauthorized: /gamecore/vip_store_value/1000005/1/
+[WARNING ] 2021-03-27 23:00:53 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/1000005/1/
+[WARNING ] 2021-03-27 23:00:56 | django.request:228 | Bad Request: /gamecore/vip_store_value/1000005/1/
+[WARNING ] 2021-03-27 23:01:09 | django.request:228 | Unauthorized: /gamecore/vip_store_value/100005/1/
+[WARNING ] 2021-03-27 23:01:09 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100005, 'mode': 1, 'amount': Decimal('9534.50')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100005, 'mode': 0, 'amount': Decimal('267936.0000')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100005, 'mode': 1, 'amount': Decimal('9535.000000000000000027755576')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100005, 'mode': 1, 'amount': Decimal('9535.500000000000000027755576')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100003, 'mode': 1, 'amount': Decimal('16.25000000000000002775557562')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100001, 'mode': 1, 'amount': Decimal('26.00000000000000001387778781')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100001, 'mode': 1, 'amount': Decimal('26.50000000000000002775557562')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100000, 'mode': 1, 'amount': Decimal('902.5000000000000000277555756')}
+[ERROR   ] 2021-03-27 23:01:11 | gamecore.views:664 | [client_playerValue]send_date:{'player_id': 100001, 'mode': 1, 'amount': Decimal('26.75000000000000001387778781')}
+[INFO    ] 2021-03-27 23:05:31 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 23:05:40 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100005/1/
+[WARNING ] 2021-03-27 23:05:53 | django.request:228 | Unauthorized: /gamecore/vip_store_value/100002/1/
+[WARNING ] 2021-03-27 23:05:53 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100002/1/
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100002, 'mode': 1, 'amount': 3}
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100002, 'mode': 0, 'amount': 270385}
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100002, 'mode': 1, 'amount': 4}
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100001, 'mode': 1, 'amount': 27}
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100001, 'mode': 1, 'amount': 27}
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100000, 'mode': 1, 'amount': 903}
+[ERROR   ] 2021-03-27 23:05:55 | gamecore.views:665 | [client_playerValue]send_date:{'player_id': 100001, 'mode': 1, 'amount': 27}
+[INFO    ] 2021-03-27 23:06:40 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-27 23:06:40 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-27 23:06:59 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-27 23:07:00 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-27 23:53:39 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 23:54:03 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-27 23:54:12 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100002/1/
+[WARNING ] 2021-03-27 23:54:18 | django.request:228 | Bad Request: /gamecore/vip_store_value/100002/1/
+[WARNING ] 2021-03-27 23:54:27 | django.request:228 | Unauthorized: /gamecore/vip_store_value/100000/1/
+[WARNING ] 2021-03-27 23:54:27 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100000/1/
+[ERROR   ] 2021-03-27 23:54:29 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 893}
+[ERROR   ] 2021-03-27 23:54:29 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:29 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 0, 'amount': 2956180}
+[ERROR   ] 2021-03-27 23:54:30 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:30 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 893}
+[ERROR   ] 2021-03-27 23:54:30 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:30 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 28}
+[ERROR   ] 2021-03-27 23:54:30 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:30 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 894}
+[ERROR   ] 2021-03-27 23:54:31 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:31 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 28}
+[ERROR   ] 2021-03-27 23:54:31 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:31 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 894}
+[ERROR   ] 2021-03-27 23:54:31 | gamecore.views:673 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:54:31 | gamecore.views:665 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 28}
+[ERROR   ] 2021-03-27 23:54:32 | gamecore.views:673 | [client_playerValue]exception.
+[INFO    ] 2021-03-27 23:56:19 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-27 23:56:23 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-27 23:56:35 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100000/1/
+[ERROR   ] 2021-03-27 23:56:38 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 884}
+[ERROR   ] 2021-03-27 23:56:38 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:38 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 0, 'amount': 2986180}
+[ERROR   ] 2021-03-27 23:56:38 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:39 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 885}
+[ERROR   ] 2021-03-27 23:56:39 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:39 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 28}
+[ERROR   ] 2021-03-27 23:56:39 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:39 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 885}
+[ERROR   ] 2021-03-27 23:56:40 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:40 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 29}
+[ERROR   ] 2021-03-27 23:56:40 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:40 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 886}
+[ERROR   ] 2021-03-27 23:56:40 | gamecore.views:674 | [client_playerValue]exception.
+[ERROR   ] 2021-03-27 23:56:40 | gamecore.views:666 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 29}
+[ERROR   ] 2021-03-27 23:56:41 | gamecore.views:674 | [client_playerValue]exception.
+[INFO    ] 2021-03-27 23:58:31 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-27 23:58:32 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-27 23:59:14 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-27 23:59:15 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-28 00:00:25 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-28 00:00:26 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-28 00:12:19 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-28 00:12:20 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-28 00:14:29 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-28 00:14:30 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-28 00:14:40 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-28 00:14:41 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-28 00:14:50 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-28 00:14:52 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-28 00:14:54 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-28 00:15:02 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100000/1/
+[ERROR   ] 2021-03-28 00:15:12 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 876}
+[ERROR   ] 2021-03-28 00:15:13 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[ERROR   ] 2021-03-28 00:15:13 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 0, 'amount': 3016180}
+[ERROR   ] 2021-03-28 00:15:13 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[ERROR   ] 2021-03-28 00:15:13 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 876}
+[ERROR   ] 2021-03-28 00:15:14 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[ERROR   ] 2021-03-28 00:15:14 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 29}
+[ERROR   ] 2021-03-28 00:15:14 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[ERROR   ] 2021-03-28 00:15:14 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 30}
+[ERROR   ] 2021-03-28 00:15:14 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[ERROR   ] 2021-03-28 00:15:14 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100000, 'mode': 1, 'amount': 877}
+[ERROR   ] 2021-03-28 00:15:15 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[ERROR   ] 2021-03-28 00:15:15 | gamecore.views:671 | [client_playerValue]send_data:{'player_id': 100001, 'mode': 1, 'amount': 30}
+[ERROR   ] 2021-03-28 00:15:15 | gamecore.views:677 | [client_playerValue]result:<Response [200]>
+[INFO    ] 2021-03-29 14:45:10 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 14:45:21 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-29 14:45:21 | django.request:228 | Not Found: /favicon.ico
+[INFO    ] 2021-03-29 14:51:54 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 14:51:57 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-29 14:52:06 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-29 14:52:39 | django.request:228 | Not Found: /
+[INFO    ] 2021-03-29 14:57:43 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-03-29 14:57:45 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-29 14:57:51 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 14:57:53 | django.request:228 | Not Found: /
+[INFO    ] 2021-03-29 15:28:18 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 15:28:21 | django.request:228 | Not Found: /
+[INFO    ] 2021-03-29 15:55:06 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 15:55:08 | django.request:228 | Not Found: /
+[INFO    ] 2021-03-29 16:06:59 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-03-29 16:07:00 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-03-29 16:16:38 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 16:16:40 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-29 16:16:46 | django.request:228 | Not Found: /
+[WARNING ] 2021-03-29 16:17:23 | django.request:228 | Not Found: /
+[INFO    ] 2021-03-29 16:29:02 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-03-29 16:29:04 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-06 11:33:56 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 11:34:01 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-06 11:34:01 | django.request:228 | Not Found: /favicon.ico
+[INFO    ] 2021-04-06 11:59:50 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-06 12:02:22 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-06 12:02:22 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-06 12:13:04 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 12:13:41 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-06 12:33:14 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 12:34:20 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-06 21:23:04 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 21:23:07 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-06 21:23:15 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-06 21:23:31 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-06 22:13:41 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 22:13:47 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-06 22:14:24 | django.request:228 | Unauthorized: /gamecore/player_bonus_List/100000/1/
+[ERROR   ] 2021-04-06 22:14:49 | django.request:228 | Internal Server Error: /gamecore/player_bonus_List/100000/1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3954, in get
+    rs['nick_name'] = self.get_player_nickname(d1.player_id)
+AttributeError: 'PlayerBonusListView' object has no attribute 'get_player_nickname'
+[INFO    ] 2021-04-06 22:15:21 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-06 22:15:23 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 22:16:38 | django.request:228 | Unauthorized: /gamecore/player_bonus_List/100000/1/
+[WARNING ] 2021-04-06 22:17:42 | django.request:228 | Bad Request: /gamecore/player_bonus_List/100000/2/
+[ERROR   ] 2021-04-06 22:18:10 | django.request:228 | Internal Server Error: /gamecore/player_bonus_List/100001/2/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 3963, in get
+    rs['nick_name'] = self.get_player_nickname(d2.player_id)
+AttributeError: 'PlayerBonusListView' object has no attribute 'get_player_nickname'
+[INFO    ] 2021-04-06 22:18:30 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-06 22:18:32 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-06 22:18:47 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-06 22:18:48 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-06 22:23:15 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 22:24:47 | django.request:228 | Not Found: /gamecore/player_bonus_List/100000/1/2021-03-15 00:00:00/2021-03-15 23:59:59/
+[WARNING ] 2021-04-06 22:25:05 | django.request:228 | Not Found: /gamecore/player_bonus_List/100000/1/2021-03-15 00:00:00/2021-03-15 23:59:59/
+[WARNING ] 2021-04-06 22:25:06 | django.request:228 | Not Found: /gamecore/player_bonus_List/100000/1/2021-03-15 00:00:00/2021-03-15 23:59:59/
+[WARNING ] 2021-04-06 22:25:30 | django.request:228 | Unauthorized: /gamecore/player_bonus_ListbyDate/100000/1/2021-03-15 00:00:00/2021-03-15 23:59:59/
+[INFO    ] 2021-04-06 23:12:19 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-06 23:12:28 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-07 00:01:08 | django.request:228 | Bad Request: /gamecore/player_bonus_List/100007/1/
+[INFO    ] 2021-04-07 08:50:04 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 08:50:06 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:09:19 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:09:20 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:09:39 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:09:40 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:10:41 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:10:42 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:11:34 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:11:34 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:14:27 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:14:28 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:14:54 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:14:55 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 09:55:28 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 09:55:32 | django.request:228 | Not Found: /
+[ERROR   ] 2021-04-07 09:57:37 | django.request:228 | Internal Server Error: /member/player1/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 2054, in player1
+    checkLoginId()
+TypeError: checkLoginId() missing 1 required positional argument: 'request'
+[INFO    ] 2021-04-07 09:58:43 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-07 09:58:45 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 09:59:18 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-07 09:59:45 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-07 10:00:16 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 10:00:36 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-07 10:16:58 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 10:17:40 | django.request:228 | Not Found: /player_bonus_ListbyDate/100001/1/2021-04-06 00:00:00/2021-04-06 23:59:59/
+[WARNING ] 2021-04-07 10:18:33 | django.request:228 | Not Found: /player_bonus_ListbyDate/gamecore/100001/1/2021-04-06 00:00:00/2021-04-06 23:59:59/
+[WARNING ] 2021-04-07 10:18:54 | django.request:228 | Bad Request: /gamecore/player_bonus_ListbyDate/100001/1/2021-04-06 00:00:00/2021-04-06 23:59:59/
+[INFO    ] 2021-04-07 15:45:44 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 15:45:48 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-07 15:59:07 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 15:59:09 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 16:00:13 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-07 16:00:14 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-07 23:16:16 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 23:16:22 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-07 23:16:22 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-04-07 23:16:56 | django.request:228 | Unauthorized: /gamecore/player/100000/
+[ERROR   ] 2021-04-07 23:17:15 | django.request:228 | Internal Server Error: /gamecore/player/100000/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'gamecore_player.vip1_seat' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py", line 1971, in get
+    matchPlayer = Player.objects.get(pk=pk)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 411, in get
+    num = len(clone)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 258, in __len__
+    self._fetch_all()
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1137, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'gamecore_player.vip1_seat' in 'field list'")
+[INFO    ] 2021-04-07 23:18:08 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 23:18:13 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-07 23:18:25 | django.request:228 | Unauthorized: /gamecore/player/100005/
+[WARNING ] 2021-04-07 23:18:40 | django.request:228 | Unauthorized: /gamecore/player/100007/
+[WARNING ] 2021-04-07 23:18:49 | django.request:228 | Unauthorized: /gamecore/player/100010/
+[WARNING ] 2021-04-07 23:18:54 | django.request:228 | Unauthorized: /gamecore/player/100011/
+[WARNING ] 2021-04-07 23:18:54 | django.request:228 | Bad Request: /gamecore/player/100011/
+[INFO    ] 2021-04-07 23:53:02 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-07 23:53:08 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-07 23:53:30 | django.request:228 | Unauthorized: /gamecore/player/100006/
+[WARNING ] 2021-04-07 23:53:54 | django.request:228 | Unauthorized: /gamecore/player/100001/
+[WARNING ] 2021-04-07 23:59:21 | django.request:228 | Unauthorized: /gamecore/new_player/
+[WARNING ] 2021-04-07 23:59:22 | django.request:228 | Method Not Allowed: /gamecore/new_player/
+[WARNING ] 2021-04-08 00:00:28 | gamecore.views:1899 | [AddPlayerView]
+[WARNING ] 2021-04-08 00:00:28 | django.request:228 | Bad Request: /gamecore/new_player/
+[WARNING ] 2021-04-08 00:00:42 | gamecore.views:1899 | [AddPlayerView]
+[WARNING ] 2021-04-08 00:00:42 | gamecore.views:1931 | [AddPlayerView]Success.
+[INFO    ] 2021-04-08 00:44:08 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-08 00:44:11 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-08 00:44:36 | gamecore.views:1973 | [PlayerDetailView]1-start
+[WARNING ] 2021-04-08 00:44:36 | gamecore.views:1976 | [PlayerDetailView]2-get data from db
+[WARNING ] 2021-04-08 00:44:37 | gamecore.views:1979 | [PlayerDetailView]3-data serialize
+[INFO    ] 2021-04-08 00:47:00 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-08 00:47:17 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-08 00:47:29 | gamecore.views:1973 | [PlayerDetailView]1-start
+[WARNING ] 2021-04-08 00:47:29 | gamecore.views:1976 | [PlayerDetailView]2-get data from db
+[WARNING ] 2021-04-08 00:47:29 | gamecore.views:1979 | [PlayerDetailView]3-data serialize
+[INFO    ] 2021-04-08 00:50:26 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-08 00:50:27 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-08 00:50:47 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-08 00:50:47 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-08 01:03:51 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-08 01:03:52 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-08 01:19:43 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-08 01:19:44 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-08 07:10:12 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/happycity/settings.py changed, reloading.
+[INFO    ] 2021-04-08 07:10:13,669 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-08 07:24:10,101 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-08 07:24:13,321 | django.request:228 | Not Found: /
+[INFO    ] 2021-04-09 21:02:25,441 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-09 21:02:33,339 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-09 21:02:33,487 | django.request:228 | Not Found: /favicon.ico
+[INFO    ] 2021-04-09 21:03:53,704 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-09 21:03:55,124 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-09 21:04:16,044 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-09 21:04:17,259 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-09 21:04:56,820 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-09 21:04:58,196 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-11 07:08:09,746 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-11 07:08:13,228 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-11 07:08:17,518 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100000/1/
+[WARNING ] 2021-04-11 07:08:19,718 | gamecore.views:3600 | [VipStoredValueView]1-start
+[WARNING ] 2021-04-11 07:08:19,718 | gamecore.views:3608 | [VipStoredValueView]2-取得vip等級需扣除的鑽石數量,spent : <built-in method total_seconds of datetime.timedelta object at 0x7f97f8114660> microsecond
+[WARNING ] 2021-04-11 07:08:19,721 | gamecore.views:3627 | [VipStoredValueView]r2-餘額不足。,spent : <built-in method total_seconds of datetime.timedelta object at 0x7f97f80aae10> microsecond
+[WARNING ] 2021-04-11 07:08:19,754 | django.request:228 | Bad Request: /gamecore/vip_store_value/100000/1/
+[INFO    ] 2021-04-11 07:19:45,218 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-11 07:19:46,947 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-11 07:19:56,679 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-11 07:19:59,117 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-11 07:20:09,749 | django.request:228 | Method Not Allowed: /gamecore/vip_store_value/100000/1/
+[WARNING ] 2021-04-11 07:20:12,933 | gamecore.views:3600 | [VipStoredValueView]1-start
+[WARNING ] 2021-04-11 07:20:12,934 | gamecore.views:3608 | [VipStoredValueView]2-取得vip等級需扣除的鑽石數量,spent : 0.000435 microsecond
+[WARNING ] 2021-04-11 07:20:12,937 | gamecore.views:3627 | [VipStoredValueView]r2-餘額不足。,spent : 0.00282 microsecond
+[WARNING ] 2021-04-11 07:20:12,980 | django.request:228 | Bad Request: /gamecore/vip_store_value/100000/1/
+[INFO    ] 2021-04-11 07:20:43,731 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-04-11 07:20:44,502 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-04-12 03:26:44,372 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-12 03:26:50,648 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-12 03:26:51,570 | django.request:228 | Not Found: /favicon.ico
+[ERROR   ] 2021-04-12 03:26:59,930 | django.request:228 | Internal Server Error: /member/playerlogin/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 2078, in playerlogin
+    diff = (d8 - d1).total_seconds()
+UnboundLocalError: local variable 'd1' referenced before assignment
+[INFO    ] 2021-04-12 03:28:00,630 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-12 03:28:01,411 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-12 03:28:10,368 | django.request:228 | Not Found: /
+[WARNING ] 2021-04-12 03:28:32,003 | member.views:2009 | [playerlogin]1-start ============================================
+[WARNING ] 2021-04-12 03:28:32,004 | member.views:2079 | [playerlogin]返回空表單,spent : 0.000826 seconds
+[WARNING ] 2021-04-12 03:28:40,852 | member.views:2009 | [playerlogin]1-start ============================================
+[WARNING ] 2021-04-12 03:28:40,854 | member.views:2015 | [playerlogin]2-loginForm1導入,spent : 0.002113 seconds
+[WARNING ] 2021-04-12 03:28:40,855 | member.views:2020 | [playerlogin]3-loginForm1驗證表單,spent : 0.000422 seconds
+[WARNING ] 2021-04-12 03:28:40,902 | member.views:2034 | [playerlogin]5-get data,spent : 0.047052 seconds
+[WARNING ] 2021-04-12 03:28:40,902 | member.views:2054 | [playerlogin]5-write data into session,spent : 0.00028 seconds
+[WARNING ] 2021-04-12 03:28:40,915 | member.views:2060 | [playerlogin]6-新增登入記錄,spent : 0.013439 seconds
+[WARNING ] 2021-04-12 03:28:40,916 | member.views:2067 | [playerlogin]7-done,spent : 0.00033 seconds
+[WARNING ] 2021-04-12 03:28:44,150 | member.views:2009 | [playerlogin]1-start ============================================
+[WARNING ] 2021-04-12 03:28:44,150 | member.views:2079 | [playerlogin]返回空表單,spent : 0.000395 seconds
+[WARNING ] 2021-04-12 03:28:48,864 | member.views:1880 | [login]1-start ============================================
+[ERROR   ] 2021-04-12 03:28:49,001 | django.request:228 | Internal Server Error: /member/login/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 1980, in login
+    diff = (d9 - d2).total_seconds()
+UnboundLocalError: local variable 'd2' referenced before assignment
+[INFO    ] 2021-04-12 03:29:31,532 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-04-12 03:29:32,792 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-12 03:29:37,526 | member.views:1880 | [login]1-start ============================================
+[WARNING ] 2021-04-12 03:29:37,527 | member.views:1982 | [login]返回空表單,spent : 0.00049 seconds
+[WARNING ] 2021-04-12 03:29:39,921 | member.views:1880 | [login]1-start ============================================
+[WARNING ] 2021-04-12 03:29:39,921 | member.views:1892 | [login]2-start(post),spent : 0.000415 seconds
+[WARNING ] 2021-04-12 03:29:39,922 | member.views:1897 | [login]3-loginForm導入,spent : 0.001202 seconds
+[WARNING ] 2021-04-12 03:29:39,923 | member.views:1903 | [login]4-loginForm驗證表單,spent : 0.000486 seconds
+[WARNING ] 2021-04-12 03:29:39,939 | member.views:1924 | [login]5-get data,spent : 0.016 seconds
+[WARNING ] 2021-04-12 03:29:39,939 | member.views:1955 | [login]6-write data into session,spent : 0.000323 seconds
+[WARNING ] 2021-04-12 03:29:39,948 | member.views:1961 | [login]7-新增登入記錄,spent : 0.008598 seconds
+[WARNING ] 2021-04-12 03:29:39,953 | member.views:1968 | [login]done,spent : 0.005701 seconds
+[WARNING ] 2021-04-12 03:29:43,899 | member.views:1880 | [login]1-start ============================================
+[WARNING ] 2021-04-12 03:29:43,900 | member.views:1982 | [login]返回空表單,spent : 0.000825 seconds
+[INFO    ] 2021-04-29 16:39:42,640 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-04-29 16:40:31,200 | gamecore.views:2695 | [SenderTransferListWithDateView](sender_transfer/756/2021-03-29 00:00:00/2021-04-28 23:59:59/2)1-start =============================
+[WARNING ] 2021-04-29 16:40:31,216 | gamecore.views:2705 | [SenderTransferListWithDateView]2-filter,spent : 0.015378 seconds
+[WARNING ] 2021-04-29 16:40:31,219 | gamecore.views:2712 | [SenderTransferListWithDateView]3-serializer,spent : 0.003803 seconds
+[WARNING ] 2021-04-29 16:40:31,250 | django.request:228 | Bad Request: /gamecore/sender_transfer/756/2021-03-29 00:00:00/2021-04-28 23:59:59/2/
+[INFO    ] 2021-05-03 20:29:29,181 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-03 20:29:41,333 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-03 20:29:42,064 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-05-03 20:29:52,510 | member.views:1906 | [login]1-start ============================================
+[WARNING ] 2021-05-03 20:29:52,511 | member.views:2008 | [login]返回空表單,spent : 0.000701 seconds
+[WARNING ] 2021-05-03 20:29:54,713 | member.views:1906 | [login]1-start ============================================
+[WARNING ] 2021-05-03 20:29:54,714 | member.views:1918 | [login]2-start(post),spent : 0.000331 seconds
+[WARNING ] 2021-05-03 20:29:54,715 | member.views:1923 | [login]3-loginForm導入,spent : 0.00127 seconds
+[WARNING ] 2021-05-03 20:29:54,715 | member.views:1929 | [login]4-loginForm驗證表單,spent : 0.00051 seconds
+[WARNING ] 2021-05-03 20:29:54,745 | member.views:1950 | [login]5-get data,spent : 0.030032 seconds
+[WARNING ] 2021-05-03 20:29:54,746 | member.views:1981 | [login]6-write data into session,spent : 0.000227 seconds
+[WARNING ] 2021-05-03 20:29:54,787 | member.views:1987 | [login]7-新增登入記錄,spent : 0.041376 seconds
+[WARNING ] 2021-05-03 20:29:54,796 | member.views:1994 | [login]done,spent : 0.008723 seconds
+[WARNING ] 2021-05-03 20:30:23,610 | member.views:1906 | [login]1-start ============================================
+[WARNING ] 2021-05-03 20:30:23,610 | member.views:2008 | [login]返回空表單,spent : 0.000517 seconds
+[WARNING ] 2021-05-03 20:30:30,075 | member.views:2035 | [playerlogin]1-start ============================================
+[WARNING ] 2021-05-03 20:30:30,075 | member.views:2105 | [playerlogin]返回空表單,spent : 0.00067 seconds
+[WARNING ] 2021-05-03 20:30:45,623 | member.views:2035 | [playerlogin]1-start ============================================
+[WARNING ] 2021-05-03 20:30:45,624 | member.views:2041 | [playerlogin]2-loginForm1導入,spent : 0.001003 seconds
+[WARNING ] 2021-05-03 20:30:45,624 | member.views:2046 | [playerlogin]3-loginForm1驗證表單,spent : 0.000404 seconds
+[WARNING ] 2021-05-03 20:30:45,647 | member.views:2060 | [playerlogin]5-get data,spent : 0.022797 seconds
+[WARNING ] 2021-05-03 20:30:45,647 | member.views:2080 | [playerlogin]5-write data into session,spent : 0.000635 seconds
+[WARNING ] 2021-05-03 20:30:45,655 | member.views:2086 | [playerlogin]6-新增登入記錄,spent : 0.007732 seconds
+[WARNING ] 2021-05-03 20:30:45,655 | member.views:2093 | [playerlogin]7-done,spent : 0.000228 seconds
+[WARNING ] 2021-05-03 20:30:53,529 | member.views:2035 | [playerlogin]1-start ============================================
+[WARNING ] 2021-05-03 20:30:53,529 | member.views:2105 | [playerlogin]返回空表單,spent : 0.000522 seconds
+[INFO    ] 2021-05-10 10:31:04,982 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-10 10:34:56,125 | member.views:59 | [index]1-start ============================================
+[WARNING ] 2021-05-10 10:34:56,290 | member.views:1906 | [login]1-start ============================================
+[WARNING ] 2021-05-10 10:34:56,292 | member.views:2008 | [login]返回空表單,spent : 0.000916 seconds
+[WARNING ] 2021-05-10 10:34:56,858 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-05-10 10:34:58,242 | member.views:1906 | [login]1-start ============================================
+[WARNING ] 2021-05-10 10:34:58,243 | member.views:1918 | [login]2-start(post),spent : 0.000377 seconds
+[WARNING ] 2021-05-10 10:34:58,244 | member.views:1923 | [login]3-loginForm導入,spent : 0.001076 seconds
+[WARNING ] 2021-05-10 10:34:58,245 | member.views:1929 | [login]4-loginForm驗證表單,spent : 0.000741 seconds
+[WARNING ] 2021-05-10 10:34:58,273 | member.views:1950 | [login]5-get data,spent : 0.028566 seconds
+[WARNING ] 2021-05-10 10:34:58,273 | member.views:1981 | [login]6-write data into session,spent : 0.000291 seconds
+[WARNING ] 2021-05-10 10:34:58,292 | member.views:1987 | [login]7-新增登入記錄,spent : 0.018422 seconds
+[WARNING ] 2021-05-10 10:34:58,305 | member.views:1994 | [login]done,spent : 0.013012 seconds
+[INFO    ] 2021-05-10 10:46:31,962 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-05-10 10:46:33,232 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-05-10 10:47:32,829 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-05-10 10:47:33,544 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-05-10 10:49:40,578 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-10 10:49:43,538 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-10 10:50:01,265 | member.views:1910 | [login]1-start ============================================
+[WARNING ] 2021-05-10 10:50:01,357 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-10 10:50:14,622 | member.views:1910 | [login]1-start ============================================
+[WARNING ] 2021-05-10 10:50:14,660 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-10 10:50:40,640 | member.views:1910 | [login]1-start ============================================
+[WARNING ] 2021-05-10 10:50:40,643 | member.views:2012 | [login]返回空表單,spent : 0.003139 seconds
+[WARNING ] 2021-05-10 10:50:42,690 | member.views:1910 | [login]1-start ============================================
+[WARNING ] 2021-05-10 10:50:42,691 | member.views:1922 | [login]2-start(post),spent : 0.000279 seconds
+[WARNING ] 2021-05-10 10:50:42,692 | member.views:1927 | [login]3-loginForm導入,spent : 0.001307 seconds
+[WARNING ] 2021-05-10 10:50:42,693 | member.views:1933 | [login]4-loginForm驗證表單,spent : 0.000684 seconds
+[WARNING ] 2021-05-10 10:50:42,709 | member.views:1954 | [login]5-get data,spent : 0.016902 seconds
+[WARNING ] 2021-05-10 10:50:42,710 | member.views:1985 | [login]6-write data into session,spent : 0.000546 seconds
+[WARNING ] 2021-05-10 10:50:42,714 | member.views:1991 | [login]7-新增登入記錄,spent : 0.004186 seconds
+[WARNING ] 2021-05-10 10:50:42,731 | member.views:1998 | [login]done,spent : 0.017208 seconds
+[INFO    ] 2021-05-10 12:21:24,327 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-10 12:24:52,981 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-10 12:24:59,391 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-10 12:24:59,412 | member.views:2046 | [login]返回空表單,spent : 0.021209 seconds
+[WARNING ] 2021-05-10 12:25:03,939 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-10 12:25:03,960 | member.views:1956 | [login]2-start(post),spent : 0.02176 seconds
+[WARNING ] 2021-05-10 12:25:03,961 | member.views:1961 | [login]3-loginForm導入,spent : 0.000705 seconds
+[WARNING ] 2021-05-10 12:25:03,961 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.00026 seconds
+[WARNING ] 2021-05-10 12:25:03,968 | member.views:1988 | [login]5-get data,spent : 0.006903 seconds
+[WARNING ] 2021-05-10 12:25:03,968 | member.views:2019 | [login]6-write data into session,spent : 0.000314 seconds
+[WARNING ] 2021-05-10 12:25:03,985 | member.views:2025 | [login]7-新增登入記錄,spent : 0.016333 seconds
+[WARNING ] 2021-05-10 12:25:03,990 | member.views:2032 | [login]done,spent : 0.004937 seconds
+[ERROR   ] 2021-05-10 12:25:14,340 | django.request:228 | Internal Server Error: /member/gameroom_detail/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 1325, in gameroom_detail
+    if len(player1) > 0:
+TypeError: object of type 'int' has no len()
+[INFO    ] 2021-05-10 12:28:54,048 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-05-10 12:28:55,451 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-05-10 12:29:02,956 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-10 12:31:24,318 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-10 12:31:24,321 | member.views:2046 | [login]返回空表單,spent : 0.00234 seconds
+[INFO    ] 2021-05-12 14:45:26,796 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-12 14:45:33,117 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-12 14:45:33,284 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-05-12 14:45:42,572 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-12 14:45:42,575 | member.views:2046 | [login]返回空表單,spent : 0.001109 seconds
+[WARNING ] 2021-05-12 14:45:44,534 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-12 14:45:44,535 | member.views:1956 | [login]2-start(post),spent : 0.001519 seconds
+[WARNING ] 2021-05-12 14:45:44,537 | member.views:1961 | [login]3-loginForm導入,spent : 0.002116 seconds
+[WARNING ] 2021-05-12 14:45:44,538 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000434 seconds
+[WARNING ] 2021-05-12 14:45:44,567 | member.views:1988 | [login]5-get data,spent : 0.029377 seconds
+[WARNING ] 2021-05-12 14:45:44,568 | member.views:2019 | [login]6-write data into session,spent : 0.000969 seconds
+[WARNING ] 2021-05-12 14:45:44,589 | member.views:2025 | [login]7-新增登入記錄,spent : 0.020516 seconds
+[WARNING ] 2021-05-12 14:45:44,596 | member.views:2032 | [login]done,spent : 0.006901 seconds
+[ERROR   ] 2021-05-12 14:54:33,717 | django.request:228 | Internal Server Error: /member/player/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1768, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 621, in player
+    ret = Player.objects.get(pk = player_id)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1337, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1365, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1298, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1155, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    ) from e
+ValueError: Field 'id' expected a number but got ''.
+[ERROR   ] 2021-05-12 14:58:10,588 | django.request:228 | Internal Server Error: /member/player/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1768, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 621, in player
+    ret = Player.objects.get(pk = player_id)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1337, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1365, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1298, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1155, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    ) from e
+ValueError: Field 'id' expected a number but got ''.
+[INFO    ] 2021-05-12 14:58:29,190 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-05-12 14:58:32,880 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-12 14:59:21,592 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-12 14:59:21,651 | django.request:228 | Not Found: /
+[WARNING ] 2021-05-12 14:59:44,450 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-12 14:59:44,452 | member.views:2046 | [login]返回空表單,spent : 0.001988 seconds
+[WARNING ] 2021-05-12 14:59:46,455 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-05-12 14:59:46,456 | member.views:1956 | [login]2-start(post),spent : 0.000429 seconds
+[WARNING ] 2021-05-12 14:59:46,457 | member.views:1961 | [login]3-loginForm導入,spent : 0.0009 seconds
+[WARNING ] 2021-05-12 14:59:46,457 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000363 seconds
+[WARNING ] 2021-05-12 14:59:46,469 | member.views:1988 | [login]5-get data,spent : 0.011761 seconds
+[WARNING ] 2021-05-12 14:59:46,469 | member.views:2019 | [login]6-write data into session,spent : 0.000251 seconds
+[WARNING ] 2021-05-12 14:59:46,472 | member.views:2025 | [login]7-新增登入記錄,spent : 0.003288 seconds
+[WARNING ] 2021-05-12 14:59:46,475 | member.views:2032 | [login]done,spent : 0.002569 seconds
+[INFO    ] 2021-05-16 11:22:42,678 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-05-16 18:01:07,162 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-06-20 13:19:23,614 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-06-20 13:19:47,437 | django.request:228 | Not Found: /
+[WARNING ] 2021-06-20 13:19:52,821 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-06-20 13:19:52,822 | member.views:2046 | [login]返回空表單,spent : 0.000562 seconds
+[WARNING ] 2021-06-20 13:20:02,995 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-06-20 13:20:02,996 | member.views:1956 | [login]2-start(post),spent : 0.00046 seconds
+[WARNING ] 2021-06-20 13:20:02,996 | member.views:1961 | [login]3-loginForm導入,spent : 0.000611 seconds
+[WARNING ] 2021-06-20 13:20:02,997 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000408 seconds
+[WARNING ] 2021-06-20 13:20:03,106 | member.views:2046 | [login]返回空表單,spent : 0.110708 seconds
+[WARNING ] 2021-06-20 13:20:14,605 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-06-20 13:20:14,605 | member.views:1956 | [login]2-start(post),spent : 0.000386 seconds
+[WARNING ] 2021-06-20 13:20:14,606 | member.views:1961 | [login]3-loginForm導入,spent : 0.000981 seconds
+[WARNING ] 2021-06-20 13:20:14,607 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000543 seconds
+[WARNING ] 2021-06-20 13:20:14,631 | member.views:2046 | [login]返回空表單,spent : 0.026127 seconds
+[INFO    ] 2021-07-08 23:05:58,657 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-08 23:06:14,437 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-08 23:06:14,694 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-07-08 23:06:24,067 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:06:24,068 | member.views:2046 | [login]返回空表單,spent : 0.000751 seconds
+[WARNING ] 2021-07-08 23:08:53,285 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:08:53,287 | member.views:1956 | [login]2-start(post),spent : 0.001835 seconds
+[WARNING ] 2021-07-08 23:08:53,291 | member.views:1961 | [login]3-loginForm導入,spent : 0.004219 seconds
+[WARNING ] 2021-07-08 23:08:53,292 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000503 seconds
+[WARNING ] 2021-07-08 23:08:53,396 | member.views:2046 | [login]返回空表單,spent : 0.111152 seconds
+[WARNING ] 2021-07-08 23:09:01,334 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:09:01,334 | member.views:1956 | [login]2-start(post),spent : 0.000361 seconds
+[WARNING ] 2021-07-08 23:09:01,335 | member.views:1961 | [login]3-loginForm導入,spent : 0.000553 seconds
+[WARNING ] 2021-07-08 23:09:01,335 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000244 seconds
+[WARNING ] 2021-07-08 23:09:01,359 | member.views:1988 | [login]5-get data,spent : 0.023942 seconds
+[WARNING ] 2021-07-08 23:09:01,359 | member.views:2019 | [login]6-write data into session,spent : 0.000495 seconds
+[WARNING ] 2021-07-08 23:09:01,421 | member.views:2025 | [login]7-新增登入記錄,spent : 0.061625 seconds
+[WARNING ] 2021-07-08 23:09:01,438 | member.views:2032 | [login]done,spent : 0.016727 seconds
+[WARNING ] 2021-07-08 23:10:11,622 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:10:11,624 | member.views:2046 | [login]返回空表單,spent : 0.001469 seconds
+[INFO    ] 2021-07-08 23:28:17,049 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-08 23:28:19,650 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-08 23:28:25,588 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:28:25,589 | member.views:2046 | [login]返回空表單,spent : 0.000855 seconds
+[WARNING ] 2021-07-08 23:28:27,537 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:28:27,537 | member.views:1956 | [login]2-start(post),spent : 0.000427 seconds
+[WARNING ] 2021-07-08 23:28:27,538 | member.views:1961 | [login]3-loginForm導入,spent : 0.000775 seconds
+[WARNING ] 2021-07-08 23:28:27,538 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000352 seconds
+[WARNING ] 2021-07-08 23:28:27,566 | member.views:1988 | [login]5-get data,spent : 0.028176 seconds
+[WARNING ] 2021-07-08 23:28:27,567 | member.views:2019 | [login]6-write data into session,spent : 0.000259 seconds
+[WARNING ] 2021-07-08 23:28:27,589 | member.views:2025 | [login]7-新增登入記錄,spent : 0.021787 seconds
+[WARNING ] 2021-07-08 23:28:27,596 | member.views:2032 | [login]done,spent : 0.007443 seconds
+[WARNING ] 2021-07-08 23:34:01,177 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-07-08 23:34:01,178 | member.views:2046 | [login]返回空表單,spent : 0.001358 seconds
+[INFO    ] 2021-07-21 02:54:09,562 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 02:54:42,197 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 03:55:37,813 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 04:01:47,718 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-21 04:01:49,297 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 04:02:02,967 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 04:11:35,113 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-21 04:11:36,686 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 04:11:50,504 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-21 04:12:19,425 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-21 04:12:20,812 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 09:40:36,585 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 09:41:10,266 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 10:30:19,572 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/models.py changed, reloading.
+[INFO    ] 2021-07-25 10:30:20,859 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 10:31:23,095 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/happycity/settings.py changed, reloading.
+[INFO    ] 2021-07-25 10:31:24,129 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 10:31:43,551 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/happycity/settings.py changed, reloading.
+[INFO    ] 2021-07-25 10:31:44,101 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 10:39:58,700 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/happycity/settings.py changed, reloading.
+[INFO    ] 2021-07-25 10:40:00,140 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 10:41:17,584 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 10:41:17,588 | member.views:2154 | [playerlogin]返回空表單,spent : 0.002866 seconds
+[WARNING ] 2021-07-25 10:41:18,484 | django.request:228 | Not Found: /favicon.ico
+[INFO    ] 2021-07-25 10:42:37,936 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 10:42:44,313 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-25 10:42:55,254 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 10:42:55,256 | member.views:2154 | [playerlogin]返回空表單,spent : 0.001635 seconds
+[WARNING ] 2021-07-25 10:43:17,715 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 10:43:17,719 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.00357 seconds
+[WARNING ] 2021-07-25 10:43:17,719 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000479 seconds
+[WARNING ] 2021-07-25 10:43:17,742 | member.views:2099 | [playerlogin]5-get data,spent : 0.023268 seconds
+[ERROR   ] 2021-07-25 10:43:17,901 | django.request:228 | Internal Server Error: /member/playerlogin/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.ProgrammingError: (1146, "Table 'godgamemj.player_data_user_view' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 2111, in playerlogin
+    if not user_view.objects.filter(pid=user_id).exists():
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 777, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/query.py", line 534, in has_results
+    return compiler.has_results()
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1107, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1137, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'godgamemj.player_data_user_view' doesn't exist")
+[INFO    ] 2021-07-25 10:56:26,298 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 10:56:30,564 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-25 10:56:30,665 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-07-25 10:56:44,418 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 10:56:44,422 | member.views:2154 | [playerlogin]返回空表單,spent : 0.00222 seconds
+[WARNING ] 2021-07-25 10:56:58,552 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 10:56:58,555 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.002765 seconds
+[WARNING ] 2021-07-25 10:56:58,555 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000486 seconds
+[WARNING ] 2021-07-25 10:56:58,599 | member.views:2099 | [playerlogin]5-get data,spent : 0.043776 seconds
+[ERROR   ] 2021-07-25 10:56:58,841 | django.request:228 | Internal Server Error: /member/playerlogin/
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'user_view.id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py", line 2115, in playerlogin
+    gameplayer = user_view.objects.get(pid=user_id)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 411, in get
+    num = len(clone)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 258, in __len__
+    self._fetch_all()
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1137, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/Users/dualwings/Projects/HappyCityDB/HSDBS/lib/python3.7/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'user_view.id' in 'field list'")
+[INFO    ] 2021-07-25 11:15:57,144 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 11:16:09,253 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-25 11:16:16,918 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:16:16,919 | member.views:2154 | [playerlogin]返回空表單,spent : 0.000704 seconds
+[WARNING ] 2021-07-25 11:16:25,527 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:16:25,528 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.001286 seconds
+[WARNING ] 2021-07-25 11:16:25,529 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000455 seconds
+[WARNING ] 2021-07-25 11:16:25,549 | member.views:2099 | [playerlogin]5-get data,spent : 0.020505 seconds
+[WARNING ] 2021-07-25 11:16:25,569 | member.views:2129 | [playerlogin]5-write data into session,spent : 0.020137 seconds
+[WARNING ] 2021-07-25 11:16:25,586 | member.views:2135 | [playerlogin]6-新增登入記錄,spent : 0.016489 seconds
+[WARNING ] 2021-07-25 11:16:25,586 | member.views:2142 | [playerlogin]7-done,spent : 0.000801 seconds
+[WARNING ] 2021-07-25 11:20:27,885 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:20:27,888 | member.views:2154 | [playerlogin]返回空表單,spent : 0.003242 seconds
+[WARNING ] 2021-07-25 11:23:54,967 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:23:54,970 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.002944 seconds
+[WARNING ] 2021-07-25 11:23:54,970 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000362 seconds
+[WARNING ] 2021-07-25 11:23:54,991 | member.views:2099 | [playerlogin]5-get data,spent : 0.020278 seconds
+[WARNING ] 2021-07-25 11:24:15,509 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:24:15,510 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.000772 seconds
+[WARNING ] 2021-07-25 11:24:15,510 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000479 seconds
+[WARNING ] 2021-07-25 11:24:15,536 | member.views:2099 | [playerlogin]5-get data,spent : 0.025214 seconds
+[INFO    ] 2021-07-25 11:28:43,328 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-25 11:28:44,040 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 11:30:40,783 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-25 11:30:41,487 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 11:30:58,674 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-25 11:30:59,711 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 11:31:12,572 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-25 11:31:13,693 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 11:34:42,696 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-07-25 11:34:44,091 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 11:35:00,085 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:35:00,087 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.001685 seconds
+[WARNING ] 2021-07-25 11:35:00,087 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000345 seconds
+[WARNING ] 2021-07-25 11:35:00,113 | member.views:2099 | [playerlogin]5-get data,spent : 0.026309 seconds
+[INFO    ] 2021-07-25 11:35:37,387 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 11:35:39,591 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-25 11:35:48,663 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:35:48,664 | member.views:2154 | [playerlogin]返回空表單,spent : 0.000801 seconds
+[WARNING ] 2021-07-25 11:35:56,838 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:35:56,839 | member.views:2079 | [playerlogin]2-loginForm2導入,spent : 0.000701 seconds
+[WARNING ] 2021-07-25 11:35:56,839 | member.views:2084 | [playerlogin]3-loginForm2驗證表單,spent : 0.000603 seconds
+[WARNING ] 2021-07-25 11:35:56,857 | member.views:2099 | [playerlogin]5-get data,spent : 0.017789 seconds
+[WARNING ] 2021-07-25 11:35:56,885 | member.views:2129 | [playerlogin]5-write data into session,spent : 0.028094 seconds
+[WARNING ] 2021-07-25 11:35:56,898 | member.views:2135 | [playerlogin]6-新增登入記錄,spent : 0.013209 seconds
+[WARNING ] 2021-07-25 11:35:56,899 | member.views:2142 | [playerlogin]7-done,spent : 0.000316 seconds
+[WARNING ] 2021-07-25 11:36:14,276 | member.views:2073 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:36:14,277 | member.views:2154 | [playerlogin]返回空表單,spent : 0.001144 seconds
+[INFO    ] 2021-07-25 11:36:52,193 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-07-25 11:36:52,869 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-07-25 11:37:01,299 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 11:37:08,740 | django.request:228 | Not Found: /
+[INFO    ] 2021-07-25 11:37:43,534 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-07-25 11:37:46,698 | django.request:228 | Not Found: /
+[WARNING ] 2021-07-25 11:37:52,991 | member.views:2074 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:37:52,992 | member.views:2155 | [playerlogin]返回空表單,spent : 0.001305 seconds
+[WARNING ] 2021-07-25 11:37:58,977 | member.views:2074 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:37:58,979 | member.views:2080 | [playerlogin]2-loginForm2導入,spent : 0.001743 seconds
+[WARNING ] 2021-07-25 11:37:58,979 | member.views:2085 | [playerlogin]3-loginForm2驗證表單,spent : 0.000383 seconds
+[WARNING ] 2021-07-25 11:37:58,998 | member.views:2100 | [playerlogin]5-get data,spent : 0.018092 seconds
+[WARNING ] 2021-07-25 11:38:04,050 | member.views:2074 | [playerlogin]1-start ============================================
+[WARNING ] 2021-07-25 11:38:04,051 | member.views:2080 | [playerlogin]2-loginForm2導入,spent : 0.001438 seconds
+[WARNING ] 2021-07-25 11:38:04,052 | member.views:2085 | [playerlogin]3-loginForm2驗證表單,spent : 0.000706 seconds
+[WARNING ] 2021-07-25 11:38:04,068 | member.views:2100 | [playerlogin]5-get data,spent : 0.016321 seconds
+[WARNING ] 2021-07-25 11:38:04,088 | member.views:2130 | [playerlogin]5-write data into session,spent : 0.019749 seconds
+[WARNING ] 2021-07-25 11:38:04,093 | member.views:2136 | [playerlogin]6-新增登入記錄,spent : 0.004677 seconds
+[WARNING ] 2021-07-25 11:38:04,094 | member.views:2143 | [playerlogin]7-done,spent : 0.000789 seconds
+[INFO    ] 2021-08-18 23:37:56,725 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-18 23:38:02,548 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-18 23:38:02,675 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-08-18 23:38:08,441 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-18 23:38:08,443 | member.views:2046 | [login]返回空表單,spent : 0.001486 seconds
+[WARNING ] 2021-08-18 23:38:11,745 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-18 23:38:11,745 | member.views:1956 | [login]2-start(post),spent : 0.000897 seconds
+[WARNING ] 2021-08-18 23:38:11,748 | member.views:1961 | [login]3-loginForm導入,spent : 0.002396 seconds
+[WARNING ] 2021-08-18 23:38:11,749 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000731 seconds
+[WARNING ] 2021-08-18 23:38:11,812 | member.views:2046 | [login]返回空表單,spent : 0.067376 seconds
+[WARNING ] 2021-08-18 23:41:07,120 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-18 23:41:07,122 | member.views:1956 | [login]2-start(post),spent : 0.001473 seconds
+[WARNING ] 2021-08-18 23:41:07,122 | member.views:1961 | [login]3-loginForm導入,spent : 0.000488 seconds
+[WARNING ] 2021-08-18 23:41:07,123 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000423 seconds
+[WARNING ] 2021-08-18 23:41:07,141 | member.views:1988 | [login]5-get data,spent : 0.018687 seconds
+[WARNING ] 2021-08-18 23:41:07,142 | member.views:2019 | [login]6-write data into session,spent : 0.000358 seconds
+[WARNING ] 2021-08-18 23:41:07,198 | member.views:2025 | [login]7-新增登入記錄,spent : 0.056338 seconds
+[WARNING ] 2021-08-18 23:41:07,205 | member.views:2032 | [login]done,spent : 0.006385 seconds
+[INFO    ] 2021-08-18 23:45:02,830 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 08:38:19,348 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 08:38:25,742 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 08:38:25,743 | member.views:2046 | [login]返回空表單,spent : 0.001098 seconds
+[INFO    ] 2021-08-19 08:42:00,066 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/gamecore/views.py changed, reloading.
+[INFO    ] 2021-08-19 08:42:00,890 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 08:44:11,418 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 08:44:11,418 | member.views:1956 | [login]2-start(post),spent : 0.000348 seconds
+[WARNING ] 2021-08-19 08:44:11,419 | member.views:1961 | [login]3-loginForm導入,spent : 0.001016 seconds
+[WARNING ] 2021-08-19 08:44:11,419 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000401 seconds
+[WARNING ] 2021-08-19 08:44:11,448 | member.views:1988 | [login]5-get data,spent : 0.028108 seconds
+[WARNING ] 2021-08-19 08:44:11,450 | member.views:2019 | [login]6-write data into session,spent : 0.002176 seconds
+[WARNING ] 2021-08-19 08:44:11,460 | member.views:2025 | [login]7-新增登入記錄,spent : 0.010881 seconds
+[WARNING ] 2021-08-19 08:44:11,469 | member.views:2032 | [login]done,spent : 0.008578 seconds
+[WARNING ] 2021-08-19 08:48:38,456 | django.request:228 | Unauthorized: /member/delete_account/
+[WARNING ] 2021-08-19 08:49:21,178 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 08:49:21,179 | member.views:2046 | [login]返回空表單,spent : 0.000432 seconds
+[INFO    ] 2021-08-19 08:59:17,181 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 08:59:20,093 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 08:59:33,724 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 08:59:33,725 | member.views:2046 | [login]返回空表單,spent : 0.001099 seconds
+[WARNING ] 2021-08-19 08:59:36,013 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 08:59:36,014 | member.views:1956 | [login]2-start(post),spent : 0.000285 seconds
+[WARNING ] 2021-08-19 08:59:36,015 | member.views:1961 | [login]3-loginForm導入,spent : 0.000914 seconds
+[WARNING ] 2021-08-19 08:59:36,015 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.00074 seconds
+[WARNING ] 2021-08-19 08:59:36,032 | member.views:1988 | [login]5-get data,spent : 0.016909 seconds
+[WARNING ] 2021-08-19 08:59:36,033 | member.views:2019 | [login]6-write data into session,spent : 0.000535 seconds
+[WARNING ] 2021-08-19 08:59:36,041 | member.views:2025 | [login]7-新增登入記錄,spent : 0.008345 seconds
+[WARNING ] 2021-08-19 08:59:36,045 | member.views:2032 | [login]done,spent : 0.003647 seconds
+[WARNING ] 2021-08-19 09:03:17,610 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:03:17,611 | member.views:2046 | [login]返回空表單,spent : 0.00047 seconds
+[WARNING ] 2021-08-19 09:03:33,078 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 09:03:33,167 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-08-19 09:03:48,201 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 09:03:51,993 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-08-19 09:03:52,672 | member.views:59 | [index]1-start ============================================
+[WARNING ] 2021-08-19 09:03:52,690 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:03:52,691 | member.views:2046 | [login]返回空表單,spent : 0.00067 seconds
+[WARNING ] 2021-08-19 09:03:53,151 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-08-19 09:03:53,482 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:03:53,483 | member.views:2046 | [login]返回空表單,spent : 0.000702 seconds
+[WARNING ] 2021-08-19 09:04:21,656 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:04:21,657 | member.views:1956 | [login]2-start(post),spent : 0.001435 seconds
+[WARNING ] 2021-08-19 09:04:21,658 | member.views:1961 | [login]3-loginForm導入,spent : 0.001157 seconds
+[WARNING ] 2021-08-19 09:04:21,659 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000728 seconds
+[WARNING ] 2021-08-19 09:04:21,683 | member.views:1988 | [login]5-get data,spent : 0.024129 seconds
+[WARNING ] 2021-08-19 09:04:21,683 | member.views:2019 | [login]6-write data into session,spent : 0.000337 seconds
+[WARNING ] 2021-08-19 09:04:21,688 | member.views:2025 | [login]7-新增登入記錄,spent : 0.004364 seconds
+[WARNING ] 2021-08-19 09:04:21,704 | member.views:2032 | [login]done,spent : 0.015884 seconds
+[WARNING ] 2021-08-19 09:04:27,060 | django.request:228 | Not Found: /favicon.ico
+[WARNING ] 2021-08-19 09:05:15,836 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:05:15,838 | member.views:2046 | [login]返回空表單,spent : 0.001554 seconds
+[INFO    ] 2021-08-19 09:09:16,301 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 09:09:19,634 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 09:09:23,891 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:09:23,891 | member.views:2046 | [login]返回空表單,spent : 0.000815 seconds
+[WARNING ] 2021-08-19 09:09:25,694 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:09:25,695 | member.views:1956 | [login]2-start(post),spent : 0.000243 seconds
+[WARNING ] 2021-08-19 09:09:25,696 | member.views:1961 | [login]3-loginForm導入,spent : 0.001027 seconds
+[WARNING ] 2021-08-19 09:09:25,697 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.001 seconds
+[WARNING ] 2021-08-19 09:09:25,714 | member.views:1988 | [login]5-get data,spent : 0.016854 seconds
+[WARNING ] 2021-08-19 09:09:25,714 | member.views:2019 | [login]6-write data into session,spent : 0.000865 seconds
+[WARNING ] 2021-08-19 09:09:25,719 | member.views:2025 | [login]7-新增登入記錄,spent : 0.004536 seconds
+[WARNING ] 2021-08-19 09:09:25,731 | member.views:2032 | [login]done,spent : 0.011418 seconds
+[WARNING ] 2021-08-19 09:10:01,122 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 09:10:01,124 | member.views:2046 | [login]返回空表單,spent : 0.001868 seconds
+[INFO    ] 2021-08-19 12:41:05,454 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 12:41:09,049 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 12:41:14,463 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:41:14,464 | member.views:2046 | [login]返回空表單,spent : 0.001137 seconds
+[WARNING ] 2021-08-19 12:41:16,393 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:41:16,394 | member.views:1956 | [login]2-start(post),spent : 0.000295 seconds
+[WARNING ] 2021-08-19 12:41:16,394 | member.views:1961 | [login]3-loginForm導入,spent : 0.000753 seconds
+[WARNING ] 2021-08-19 12:41:16,395 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000581 seconds
+[WARNING ] 2021-08-19 12:41:16,411 | member.views:1988 | [login]5-get data,spent : 0.016347 seconds
+[WARNING ] 2021-08-19 12:41:16,412 | member.views:2019 | [login]6-write data into session,spent : 0.000281 seconds
+[WARNING ] 2021-08-19 12:41:16,426 | member.views:2025 | [login]7-新增登入記錄,spent : 0.014333 seconds
+[WARNING ] 2021-08-19 12:41:16,442 | member.views:2032 | [login]done,spent : 0.016386 seconds
+[INFO    ] 2021-08-19 12:46:27,361 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 12:46:30,179 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 12:46:34,614 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:46:34,706 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 12:46:58,521 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:46:58,522 | member.views:2046 | [login]返回空表單,spent : 0.000899 seconds
+[WARNING ] 2021-08-19 12:47:00,838 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:47:00,838 | member.views:1956 | [login]2-start(post),spent : 0.000616 seconds
+[WARNING ] 2021-08-19 12:47:00,840 | member.views:1961 | [login]3-loginForm導入,spent : 0.001187 seconds
+[WARNING ] 2021-08-19 12:47:00,840 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000438 seconds
+[WARNING ] 2021-08-19 12:47:00,856 | member.views:1988 | [login]5-get data,spent : 0.016347 seconds
+[WARNING ] 2021-08-19 12:47:00,857 | member.views:2019 | [login]6-write data into session,spent : 0.000649 seconds
+[WARNING ] 2021-08-19 12:47:00,862 | member.views:2025 | [login]7-新增登入記錄,spent : 0.005251 seconds
+[WARNING ] 2021-08-19 12:47:00,878 | member.views:2032 | [login]done,spent : 0.016239 seconds
+[INFO    ] 2021-08-19 12:48:44,563 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 12:48:47,193 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 12:49:04,327 | member.views:1945 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:49:04,328 | member.views:2047 | [login]返回空表單,spent : 0.000777 seconds
+[WARNING ] 2021-08-19 12:49:06,419 | member.views:1945 | [login]1-start ============================================
+[WARNING ] 2021-08-19 12:49:06,419 | member.views:1957 | [login]2-start(post),spent : 0.000239 seconds
+[WARNING ] 2021-08-19 12:49:06,420 | member.views:1962 | [login]3-loginForm導入,spent : 0.000826 seconds
+[WARNING ] 2021-08-19 12:49:06,421 | member.views:1968 | [login]4-loginForm驗證表單,spent : 0.000852 seconds
+[WARNING ] 2021-08-19 12:49:06,436 | member.views:1989 | [login]5-get data,spent : 0.015285 seconds
+[WARNING ] 2021-08-19 12:49:06,437 | member.views:2020 | [login]6-write data into session,spent : 0.000657 seconds
+[WARNING ] 2021-08-19 12:49:06,449 | member.views:2026 | [login]7-新增登入記錄,spent : 0.011853 seconds
+[WARNING ] 2021-08-19 12:49:06,459 | member.views:2033 | [login]done,spent : 0.010226 seconds
+[INFO    ] 2021-08-19 12:50:32,994 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-08-19 12:50:34,155 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-08-19 12:51:27,285 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-08-19 12:51:27,980 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[INFO    ] 2021-08-19 12:59:52,443 | django.utils.autoreload:598 | Watching for file changes with StatReloader
+[WARNING ] 2021-08-19 12:59:56,083 | django.request:228 | Not Found: /
+[WARNING ] 2021-08-19 13:00:13,835 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 13:00:13,838 | member.views:2046 | [login]返回空表單,spent : 0.003015 seconds
+[WARNING ] 2021-08-19 13:00:15,994 | member.views:1944 | [login]1-start ============================================
+[WARNING ] 2021-08-19 13:00:15,994 | member.views:1956 | [login]2-start(post),spent : 0.00028 seconds
+[WARNING ] 2021-08-19 13:00:15,996 | member.views:1961 | [login]3-loginForm導入,spent : 0.001379 seconds
+[WARNING ] 2021-08-19 13:00:15,996 | member.views:1967 | [login]4-loginForm驗證表單,spent : 0.000652 seconds
+[WARNING ] 2021-08-19 13:00:16,017 | member.views:1988 | [login]5-get data,spent : 0.020253 seconds
+[WARNING ] 2021-08-19 13:00:16,017 | member.views:2019 | [login]6-write data into session,spent : 0.000233 seconds
+[WARNING ] 2021-08-19 13:00:16,024 | member.views:2025 | [login]7-新增登入記錄,spent : 0.00758 seconds
+[WARNING ] 2021-08-19 13:00:16,033 | member.views:2032 | [login]done,spent : 0.008002 seconds
+[INFO    ] 2021-08-19 13:03:35,419 | django.utils.autoreload:222 | /Users/dualwings/Projects/HappyCityDB/HSDBS/server/member/views.py changed, reloading.
+[INFO    ] 2021-08-19 13:03:37,130 | django.utils.autoreload:598 | Watching for file changes with StatReloader

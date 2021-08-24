@@ -1,0 +1,438 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- bootstrap datetimepicker -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}"/>
+<!-- bootstrap-table -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table.css' %}">
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table-pagejump.css' %}">
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄 </a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled show">
+    <li class="active"><a href="/member/playerlist/">玩家列表</a></li>
+    <li><a href="/member/vip/">VIP組織圖</a></li>
+  </ul>
+</li>                    
+<li><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <div class="div">
+    <input type="hidden" id="src_player_id" value="{{ data.id }}">
+    <input type="hidden" id="src_player_nickname" value="{{ data.nick_name }}">
+    <input type="hidden" id="src_player_state" value="{{ data.state }}">
+    <input type="hidden" id="src_player_type" value="{{ data.player_type }}">
+    <input type="hidden" id="src_bind_player_id" value="{{ data.bind_playerid }}">
+    <input type="hidden" id="src_bind_player_name" value="{{ data.bind_playername }}">
+    <input type="hidden" id="admin_account" name="admin_account" value="{{ admin_account }}">
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <span class = "mx-3 text-secondary">玩家名稱</span>
+      <h1 class = "mx-3 text-dark" id="player_name">
+        {{ data.nick_name }} ( {{ data.id }} )        
+      </h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">Line ID</span>
+      <h1 class = "mx-3 text-dark" id="player_lineId">
+        {{ data.line_id }}
+      </h1>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <span class = "mx-3 text-secondary">推薦人</span>
+      <h1 class = "mx-3 text-blue" id="bind_playername">
+        {% if data.bind_playername != '' %}
+          {{ data.bind_playername }}
+        {% else %}
+          無
+        {% endif %}        
+      </h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">會員狀態 / 身份</span>
+      <h1>
+        {% if data.state == '1' %}
+          <span class = "mx-3 text-danger" id="state">鎖定
+        {% else %}
+          <span class = "mx-3 text-dark" id="state">正常
+        {% endif %}  
+        </span> / 
+        <span class = "mx-3 text-dark" id="permission_type">{{ data.permission_type }}</span>
+      </h1>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col">
+      <span class = "mx-3 text-secondary">上線時間</span>
+      <h1 class = "mx-3 text-dark" id="last_login_date">{{ data.last_login_date }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">註冊時間</span>
+      <h1 class = "mx-3 text-dark" id="created_date">{{ data.created_date }}</h1>
+    </div>
+  </div>
+  <div class="row my-2">
+    <div class="col-sm">
+      <button type="button" class="ml-3 mr-2 btn btn-md btn-danger" 
+      data-toggle="modal" data-target="#btnModify">修改</button>
+      <button type="button" class="mr-2 btn btn-md text-white" style="background-color: #7F45F6;"
+      data-toggle="modal" data-target="#addValue1">入金</button>
+      <button type="button" class="btn btn-md text-white" style="background-color: #FFBE00"
+      data-toggle="modal" data-target="#addValue">補幣</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <span class = "mx-3 text-secondary">持有金額</span>
+      <h1 class = "mx-3 text-dark" id="gold">$ {{ data.gold }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">正負分</span>
+      <h1 class = "mx-3 text-dark" id="score">{{ data.score }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">歷史場次</span>
+      <h1 class = "mx-3 text-dark" id="history_game_runs">{{ data.history_game_runs }}</h1>
+    </div>
+    <div class="col">
+      <span class = "mx-3 text-secondary">鑽石</span>
+      <h1 class = "mx-3 text-dark" id="star">◈ {{ data.star }}</h1>
+    </div>
+  </div>
+  <!-- page info -->
+  <div class="page-container">
+    <form action="" method="GET">
+      <div class="row mb-3">
+        <div class="col-md-9">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="startTime1" class="mr-2 form-control-md">開始時間</label>
+              <input type="text" class="form-control " id="startTime1" name = "startTime1" placeholder="請選擇開始時間">
+              <label for="endTime1" class="ml-3 mr-2 form-control-md">結束時間</label>
+              <input type="text" class="form-control " id="endTime1" name = "endTime1" placeholder="請選擇結束時間">
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3 ml-auto">
+          <button type="button" style="width:100%" class="btn btn-primary btn-md" id="btnQuery">查詢</button>
+        </div>
+      </div>
+    </form>
+    <!-- tab -->
+    <ul class="nav nav-pills flex-column flex-sm-row nav-fill mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center active" id="p1-tab" data-toggle="pill" href="#p1" role="tab" aria-controls="p1" aria-selected="true">登入紀錄</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p2-tab" data-toggle="pill" href="#p2" role="tab" aria-controls="p2" aria-selected="false">轉幣紀錄</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p3-tab" data-toggle="pill" href="#p3" role="tab" aria-controls="p3" aria-selected="false">補幣紀錄</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p4-tab" data-toggle="pill" href="#p4" role="tab" aria-controls="p4" aria-selected="false">金流異動</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p5-tab" data-toggle="pill" href="#p5" role="tab" aria-controls="p5" aria-selected="false">鑽石異動</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p6-tab" data-toggle="pill" href="#p6" role="tab" aria-controls="p6" aria-selected="false">歷史場次</a>
+      </li>
+
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="p1" role="tabpanel" aria-labelledby="p1-tab">
+        <!-- 登入紀錄 -->
+        <table id="table1">
+          <tbody>
+            {% for data1 in rs1 %}
+            <tr>
+              <td>{{ data1.id }}</td>
+              <td>{{ data1.login_ip }}</td>
+              <td>{{ data1.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
+      </div>
+      <div class="tab-pane fade" id="p2" role="tabpanel" aria-labelledby="p2-tab">
+        <!-- 轉幣紀錄 -->
+        <table id="table2">
+          <tbody>
+            {% for data2 in rs2 %}
+            <tr>
+              <td>{{ data2.id }}</td>
+              <td>{{ data2.jewel }}</td>
+              <td>{{ data2.sender_id }}</td>
+              <td>{{ data2.sender }}</td>
+              <td>{{ data2.sender_gold }}</td>
+              <td>{{ data2.receiver_id }}</td>
+              <td>{{ data2.receiver }}</td>
+              <td>{{ data2.receiver_gold }}</td>
+              <td>{{ data2.amount }}</td>
+              <td>{{ data2.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
+      </div>
+      <div class="tab-pane fade" id="p3" role="tabpanel" aria-labelledby="p3-tab">
+        <!-- 補幣紀錄 -->
+        <table id="table3">
+          <tbody>
+            {% for data3 in rs3 %}
+            <tr>
+              <td>{{ data3.id }}</td>
+              <td>{{ data3.jewel }}</td>
+              <td>{{ data3.admin_account }}</td>
+              <td>{{ data3.gold }}</td>
+              <td>{{ data3.description }}</td>
+              <td>{{ data3.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>        
+      </div>
+
+      <div class="tab-pane fade" id="p4" role="tabpanel" aria-labelledby="p4-tab">
+        <!-- 金流異動 -->
+        <table id="table4">
+          <tbody>
+            {% for data4 in rs4 %}
+            <tr>
+              <td>{{ data4.id }}</td>
+              <td>{{ data4.tradetype }}</td>
+              <td>{{ data4.amount }}</td>
+              <td>{{ data4.goldflow }}</td>
+              <td>{{ data4.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="p5" role="tabpanel" aria-labelledby="p5-tab">
+        <!-- 鑽石異動 -->
+        <table id="table6">
+          <tbody>
+            {% for data6 in rs6 %}
+            <tr>
+              <td>{{ data6.id }}</td>
+              <td>{{ data6.star_type }}</td>
+              <td>{{ data6.star }}</td>
+              <td>{{ data6.starflow }}</td>
+              <td>{{ data6.created_date }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="p6" role="tabpanel" aria-labelledby="p6-tab">
+        <!-- 歷史場次 -->
+        <table id="table5">
+          <tbody>
+            {% for data5 in rs5 %}
+            <tr>
+              <td>{{ data5.gametype }}</td>
+              <td>{{ data5.run_id }}</td>
+              <td>{{ data5.area }}</td>
+              <td>{{ data5.created_date }}</td>
+              <!-- <td>{{ data5.detail }}</td> -->
+              <td>{{ data5.state }}</td>
+              <td>{{ data5.all_bonus }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 修改 modal -->
+<div id="btnModify" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-light justify-content-center">        
+        <h5 class="modal-title">會員身份狀態</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+      </div>
+      <form action=""  method="POST">
+        {% csrf_token %}
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="player_state">會員狀態</label>
+            <select id="player_state" class="form-control">
+              <option value="0">正常</option>
+              <option value="1">鎖定</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="player_type">會員身份</label>
+            <select id="player_type" class="form-control">
+              <option value="1">一般</option>
+              <option value="2">代理</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="user_pwd1">管理者密碼:</label>
+            <input type="password" class="clear form-control" id="user_pwd1" name = "user_pwd1" placeholder="請輸入密碼">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn text-white" style="background-color:#7F45F6" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-danger submit" id="btnModifySave">確定修改</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- 玩家入金 modal -->
+<div id="addValue1" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-light justify-content-center">        
+        <h5 class="modal-title">玩家入金</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+      </div>
+
+      <form action=""  method="POST">
+        {% csrf_token %}
+        <div class="modal-body">
+          <div class="form-group pb-2">
+            <label for="player_id2">會員ID:</label>
+            <input type="text" readonly class="form-control-plaintext" id="player_id2">
+          </div>          
+          <div class="form-group pb-2">
+            <label for="player_name2">會員名稱:</label>
+            <input type="text" readonly class="form-control-plaintext" id="player_name2">
+          </div>
+          
+          <div class="form-group py-3">
+            <label for="amount2">鑽石數量:</label>
+            <input type="text" class="clear form-control" id="amount2" placeholder="請輸入鑽石數量">
+          </div>
+          <div class="form-group py-3">
+            <label for="admin_account2">管理員帳號:</label>
+            <input type="text" readonly class="form-control-plaintext" id="admin_account2">
+          </div>
+          <div class="form-group">
+            <label for="user_pwd2">管理者密碼:</label>
+            <input type="password" class="clear form-control" id="user_pwd2" name = "user_pwd2" placeholder="請輸入密碼">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn text-white" style="background-color:#7F45F6" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-danger submit" id="addValue1Save">確定入金</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 補幣 modal -->
+<div id="addValue" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-light justify-content-center">        
+        <h5 class="modal-title">補幣</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+      </div>
+
+      <form action=""  method="POST">
+        {% csrf_token %}
+        <div class="modal-body">
+          <div class="form-group pb-2">
+            <label for="player_id">會員ID:</label>
+            <input type="text" readonly class="form-control-plaintext" id="player_id">
+          </div>          
+          <div class="form-group pb-2">
+            <label for="player_name">會員名稱:</label>
+            <input type="text" readonly class="form-control-plaintext" id="player_name">
+          </div>
+          <div class="form-group pb-2">
+            <label for="amount">金額:</label>
+            <input type="text" class="clear form-control" id="amount" name = "amount">
+          </div>
+          <div class="form-group pb-2">
+            <label for="desc">補幣事由:</label>
+            <input type="text" class="clear form-control" id="desc" name = "desc">
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="typeOptions" id="type1" value="1" checked="checked">
+            <label class="form-check-label" for="type1">金幣</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="typeOptions" id="type2" value="2">
+            <label class="form-check-label" for="type2">鑽石</label>
+          </div>
+          <div class="form-group pt-3">
+            <label for="admin_account3">管理員帳號:</label>
+            <input type="text" readonly class="form-control-plaintext" id="admin_account3">
+          </div>
+          <div class="form-group">
+            <label for="user_pwd3">管理者密碼:</label>
+            <input type="password" class="clear form-control" id="user_pwd3" name = "user_pwd3" placeholder="請輸入密碼">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn text-white" style="background-color:#7F45F6" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-danger submit" id="addValueSave">確定補幣</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- bootstrap-table js -->
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table-pagejump.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/locale/bootstrap-table-zh-TW.js' %}"></script>
+<!-- bootstrap datetimepicker -->
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/moment-with-locales.min.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'member/js/datetimepicker.js' %}"></script>
+<!-- custom js -->
+<script src="{% static 'member/js/player.js' %}"></script>
+
+<script>
+  $(function () {
+    $('#pills-tab li:first-child a').tab('show')
+  })
+</script>
+{% endblock extra_scripts %}

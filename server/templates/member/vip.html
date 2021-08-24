@@ -1,0 +1,157 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- jOrgChart -->
+<link rel="stylesheet" href="{% static 'member/vendor/jOrgChart/css/jquery.jOrgChart.css' %}">
+
+<style>
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+  }
+  .jOrgChart .node {
+    width: 100px;
+    height: 135px;
+    border-radius: 4px;
+    margin: 0 8px;
+    background-color: #fff;
+    position: relative;
+  }
+  .jOrgChart .node a{
+    display: block;
+    position: relative;
+    top:75px;
+  }
+  .jOrgChart .node .pic{
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    top: 0;
+    border-radius:50% ;
+    /* background: #006633; */
+  }
+
+  </style>
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄 </a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled show">
+    <li><a href="/member/playerlist/">玩家列表</a></li>
+    <li class="active"><a href="/member/vip/">VIP組織圖</a></li>
+  </ul>
+</li>                    
+<li><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <div class="div">
+    <input type="hidden" id="now_viptype">
+    <input type="hidden" id="now_player_id">
+    <input type="hidden" id="top_seat">
+    <input type="hidden" id="now_seat">
+    <input type="hidden" id="parent_seat">
+  </div>
+  <p>
+    <span class="my-3 text-danger">玩家資訊</span>
+    <span class="my-3 text-secondary"> > </span>
+    <span class="my-3 text-danger">VIP組織圖</span>
+  </p>
+  <!-- page info -->
+  <div class="page-container">
+    <form action="" method="GET">
+      <div class="row mb-1">
+        <div class="col-md-5">
+          <div class="input-group input-group-md mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="player_id">玩家ID</label>
+            </div>
+            <input type="text" class="form-control" id="player_id"  name = "player_id" placeholder="請輸入玩家ID">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="vip_type">VIP</label>
+            </div>
+            <select class="custom-select" id="vip_type" name="vip_type">
+              <option value=1>10</option>
+              <option value=2>50</option>
+              <option value=3>100</option>
+              <option value=4>500</option>
+              <option value=5>1000</option>
+              <option value=6>2000</option>
+            </select>
+          </div>
+        </div>  
+        <div class="col-md-3 ml-auto">
+          <button type="button" style="width:100%" class="btn btn-primary btn-md" id="btnQuery">查詢</button>
+        </div>
+      </div>
+    </form>
+      <!-- 組織圖 -->
+      <div class = "row">
+        <div class="col-md-3">
+          <h2>配套樹節點總數：<span id='vip_type_count' name='vip_type_count'></span></h2>
+        </div>
+        <div class="col-md-3">
+          <h2>玩家樹節點數量：<span id='fans_count' name='fans_count'></span></h2>
+        </div>
+        <div class="col-md-3">
+          <h2>10層節點數量：<span id='level10_count' name='level10_count'></span></h2>
+        </div>
+        <div class="col-md-3">
+          <h2>推薦總人數：<span id='member_count' name='member_count'></span></h2>
+        </div>
+      </div>
+      <div class="row  justify-content-center">
+        <div id='jOrgChart' style="overflow:auto;"></div>
+      </div>
+      <div class = "row">
+        <div class="col-md-6">
+          <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer">上一級</button>
+        </div>
+        <div class="col-md-6">
+          <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload">重新載入</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- jOrgChart -->
+<script src="{% static 'member/vendor/jOrgChart/js/jquery.jOrgChart.js' %}"></script>
+<!-- custom js -->
+<script>
+  var picsrc = "{% static 'member/img/' %}"
+</script>
+<script src="{% static 'member/js/vip.js' %}"></script>
+
+
+{% endblock extra_scripts %}

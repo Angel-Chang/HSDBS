@@ -1,0 +1,930 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-18 13:24+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/admin/404.html:4 templates/admin/404.html:8
+msgid "Page not found"
+msgstr ""
+
+#: templates/admin/404.html:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: templates/admin/500.html:6 templates/admin/app_index.html:9
+#: templates/admin/auth/user/change_password.html:13
+#: templates/admin/base.html:56 templates/admin/change_form.html:18
+#: templates/admin/change_list.html:31
+#: templates/admin/delete_confirmation.html:14
+#: templates/admin/delete_selected_confirmation.html:14
+#: templates/admin/invalid_setup.html:6 templates/admin/object_history.html:6
+#: templates/registration/logged_out.html:4
+#: templates/registration/password_change_done.html:6
+#: templates/registration/password_change_form.html:7
+#: templates/registration/password_reset_complete.html:6
+#: templates/registration/password_reset_confirm.html:7
+#: templates/registration/password_reset_done.html:6
+#: templates/registration/password_reset_form.html:7
+msgid "Home"
+msgstr ""
+
+#: templates/admin/500.html:7
+msgid "Server error"
+msgstr ""
+
+#: templates/admin/500.html:11
+msgid "Server error (500)"
+msgstr ""
+
+#: templates/admin/500.html:14
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: templates/admin/500.html:15
+msgid ""
+"There's been an error. It's been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: templates/admin/actions.html:4
+msgid "Run the selected action"
+msgstr ""
+
+#: templates/admin/actions.html:4
+msgid "Go"
+msgstr ""
+
+#: templates/admin/actions.html:10
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: templates/admin/actions.html:10
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: templates/admin/actions.html:12
+msgid "Clear selection"
+msgstr ""
+
+#: templates/admin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: templates/admin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: templates/admin/auth/user/change_password.html:17
+#: templates/admin/auth/user/change_password.html:55
+#: templates/admin/base.html:44
+#: templates/registration/password_change_done.html:3
+#: templates/registration/password_change_form.html:4
+msgid "Change password"
+msgstr ""
+
+#: templates/admin/auth/user/change_password.html:28
+#: templates/admin/change_form.html:47 templates/admin/change_list.html:58
+#: templates/admin/login.html:21 templates/registration/login.html:9
+#: templates/registration/password_change_form.html:21
+msgid "Please correct the error below."
+msgstr ""
+
+#: templates/admin/auth/user/change_password.html:28
+#: templates/admin/change_form.html:47 templates/admin/change_list.html:58
+#: templates/admin/login.html:21 templates/registration/login.html:9
+#: templates/registration/password_change_form.html:21
+msgid "Please correct the errors below."
+msgstr ""
+
+#: templates/admin/auth/user/change_password.html:32
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: templates/admin/base.html:30
+msgid "Welcome,"
+msgstr ""
+
+#: templates/admin/base.html:35
+msgid "View site"
+msgstr ""
+
+#: templates/admin/base.html:40
+#: templates/registration/password_change_done.html:3
+#: templates/registration/password_change_form.html:4
+msgid "Documentation"
+msgstr ""
+
+#: templates/admin/base.html:46
+#: templates/registration/password_change_done.html:3
+#: templates/registration/password_change_form.html:4
+msgid "Log out"
+msgstr ""
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: templates/admin/base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: templates/admin/change_form.html:21 templates/admin/change_list.html:49
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: templates/admin/change_form.html:33 templates/admin/object_history.html:10
+msgid "History"
+msgstr ""
+
+#: templates/admin/change_form.html:35
+#: templates/admin/edit_inline/stacked.html:14
+#: templates/admin/edit_inline/tabular.html:36
+msgid "View on site"
+msgstr ""
+
+#: templates/admin/change_list.html:69
+msgid "Filter"
+msgstr ""
+
+#: templates/admin/change_list_results.html:17
+msgid "Remove from sorting"
+msgstr ""
+
+#: templates/admin/change_list_results.html:18
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: templates/admin/change_list_results.html:19
+msgid "Toggle sorting"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:18
+#: templates/admin/related_widget_wrapper.html:24
+#: templates/admin/submit_line.html:6
+#: templates/admin/widgets/related_widget_wrapper.html:24
+msgid "Delete"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:24
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:31
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:38
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:40
+#: templates/admin/delete_selected_confirmation.html:39
+msgid "Objects"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:47
+#: templates/admin/delete_selected_confirmation.html:50
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html:48
+#: templates/admin/delete_selected_confirmation.html:51
+msgid "No, take me back"
+msgstr ""
+
+#: templates/admin/delete_selected_confirmation.html:17
+msgid "Delete multiple objects"
+msgstr ""
+
+#: templates/admin/delete_selected_confirmation.html:23
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: templates/admin/delete_selected_confirmation.html:30
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: templates/admin/delete_selected_confirmation.html:37
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: templates/admin/edit_inline/stacked.html:12
+#: templates/admin/edit_inline/tabular.html:34 templates/admin/index.html:38
+#: templates/admin/related_widget_wrapper.html:10
+#: templates/admin/widgets/related_widget_wrapper.html:10
+msgid "Change"
+msgstr ""
+
+#: templates/admin/edit_inline/tabular.html:20
+msgid "Delete?"
+msgstr ""
+
+#: templates/admin/filter.html:2
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: templates/admin/includes/object_delete_summary.html:2
+msgid "Summary"
+msgstr ""
+
+#: templates/admin/index.html:21
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: templates/admin/index.html:32 templates/admin/related_widget_wrapper.html:17
+#: templates/admin/widgets/related_widget_wrapper.html:17
+msgid "Add"
+msgstr ""
+
+#: templates/admin/index.html:48
+msgid "You don't have permission to edit anything."
+msgstr "你沒有權限使用這個功能"
+
+#: templates/admin/invalid_setup.html:12
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: templates/admin/login.html:37 templates/registration/login.html:25
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: templates/admin/login.html:57 templates/registration/login.html:45
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: templates/admin/login.html:61 templates/registration/login.html:49
+#: templates/registration/password_reset_complete.html:18
+msgid "Log in"
+msgstr ""
+
+#: templates/admin/object_history.html:22
+msgid "Date/time"
+msgstr ""
+
+#: templates/admin/object_history.html:23
+msgid "User"
+msgstr ""
+
+#: templates/admin/object_history.html:24
+msgid "Action"
+msgstr ""
+
+#: templates/admin/object_history.html:38
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: templates/admin/pagination.html:10 templates/admin/search_form.html:9
+msgid "Show all"
+msgstr ""
+
+#: templates/admin/pagination.html:11 templates/admin/submit_line.html:3
+msgid "Save"
+msgstr ""
+
+#: templates/admin/popup_response.html:3
+msgid "Popup closing..."
+msgstr ""
+
+#: templates/admin/related_widget_wrapper.html:9
+#: templates/admin/widgets/related_widget_wrapper.html:9
+#, python-format
+msgid "Change selected %(model)s"
+msgstr ""
+
+#: templates/admin/related_widget_wrapper.html:16
+#: templates/admin/widgets/related_widget_wrapper.html:16
+#, python-format
+msgid "Add another %(model)s"
+msgstr ""
+
+#: templates/admin/related_widget_wrapper.html:23
+#: templates/admin/widgets/related_widget_wrapper.html:23
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr ""
+
+#: templates/admin/search_form.html:7
+msgid "Search"
+msgstr ""
+
+#: templates/admin/search_form.html:9
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/search_form.html:9
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: templates/admin/submit_line.html:8
+msgid "Save as new"
+msgstr ""
+
+#: templates/admin/submit_line.html:9
+msgid "Save and add another"
+msgstr ""
+
+#: templates/admin/submit_line.html:10
+msgid "Save and continue editing"
+msgstr ""
+
+#: templates/member/base.html:25
+msgid "目前持有房卡"
+msgstr ""
+
+#: templates/member/base.html:28
+msgid "販售總數"
+msgstr ""
+
+#: templates/member/base.html:28
+msgid "當月販售"
+msgstr ""
+
+#: templates/member/base.html:29
+msgid "今日販售"
+msgstr ""
+
+#: templates/member/base.html:39 templates/member/base.html:42
+msgid "房卡販售"
+msgstr "房卡販售"
+
+#: templates/member/base.html:47 templates/member/base.html:50
+msgid "房卡購買"
+msgstr ""
+
+#: templates/member/base.html:55 templates/member/base.html:58
+msgid "販售紀錄"
+msgstr ""
+
+#: templates/member/base.html:63 templates/member/base.html:66
+msgid "活躍紀錄"
+msgstr ""
+
+#: templates/member/base.html:71 templates/member/base.html:74
+msgid "推廣紀錄"
+msgstr ""
+
+#: templates/member/base.html:79 templates/member/base.html:82
+#: templates/member/get_activity_data.html:16
+#: templates/member/get_player_data.html:17
+#: templates/member/get_referral_data.html:14
+#: templates/member/get_sales_data.html:14
+#: templates/member/get_suggestion_data.html:20
+#: templates/member/get_transaction_data.html:20
+msgid "玩家查詢"
+msgstr ""
+
+#: templates/member/base.html:87 templates/member/base.html:90
+msgid "玩家建議"
+msgstr ""
+
+#: templates/member/base.html:95 templates/member/base.html:98
+msgid "交易紀錄"
+msgstr ""
+
+#: templates/member/get_activity_data.html:8
+msgid "這個月活躍紀錄"
+msgstr ""
+
+#: templates/member/get_activity_data.html:9
+msgid "上個月活躍紀錄"
+msgstr ""
+
+#: templates/member/get_activity_data.html:15
+#: templates/member/get_activity_data.html:26
+#: templates/member/get_activity_data.html:41
+#: templates/member/get_player_data.html:16
+#: templates/member/get_player_data.html:25
+#: templates/member/get_referral_data.html:13
+#: templates/member/get_referral_data.html:21
+#: templates/member/get_sales_data.html:13
+#: templates/member/get_sales_data.html:27
+#: templates/member/get_suggestion_data.html:19
+#: templates/member/get_suggestion_data.html:25
+#: templates/member/get_transaction_data.html:19
+#: templates/member/get_transaction_data.html:26
+msgid "玩家 ID"
+msgstr ""
+
+#: templates/member/get_activity_data.html:20
+#: templates/member/get_player_data.html:21
+msgid "找不到這個玩家"
+msgstr ""
+
+#: templates/member/get_activity_data.html:22
+msgid "找不到這個玩家的資料"
+msgstr ""
+
+#: templates/member/get_activity_data.html:27
+#: templates/member/get_activity_data.html:42
+#: templates/member/get_player_data.html:26
+#: templates/member/get_referral_data.html:22
+#: templates/member/get_sales_data.html:28
+#: templates/member/get_suggestion_data.html:26
+#: templates/member/get_transaction_data.html:27
+#: templates/member/sell_card.html:32
+msgid "玩家暱稱"
+msgstr ""
+
+#: templates/member/get_activity_data.html:28
+#: templates/member/get_activity_data.html:43
+msgid "玩家目前的活躍度"
+msgstr ""
+
+#: templates/member/get_activity_data.html:29
+#: templates/member/get_activity_data.html:44
+#: templates/member/get_player_data.html:51
+#: templates/member/get_referral_data.html:25
+msgid "玩家上次登陸時間"
+msgstr ""
+
+#: templates/member/get_player_data.html:9
+msgid "玩家沒有權限讀取"
+msgstr ""
+
+#: templates/member/get_player_data.html:23
+msgid "找不到這個玩家資料"
+msgstr ""
+
+#: templates/member/get_player_data.html:27
+msgid "玩家Line ID"
+msgstr ""
+
+#: templates/member/get_player_data.html:28
+msgid "玩家權限"
+msgstr ""
+
+#: templates/member/get_player_data.html:29
+msgid "玩家的俱樂部"
+msgstr ""
+
+#: templates/member/get_player_data.html:33
+#: templates/member/get_player_data.html:42
+#: templates/member/get_player_data.html:58
+msgid "沒有"
+msgstr ""
+
+#: templates/member/get_player_data.html:36
+msgid "玩家參與的俱樂部"
+msgstr ""
+
+#: templates/member/get_player_data.html:45
+msgid "玩家擁有的房卡總數"
+msgstr ""
+
+#: templates/member/get_player_data.html:46
+msgid "玩家俱樂部房卡總數"
+msgstr ""
+
+#: templates/member/get_player_data.html:47
+msgid "玩家房卡賣出總數"
+msgstr ""
+
+#: templates/member/get_player_data.html:48
+msgid "玩家這個月房卡賣出總數"
+msgstr ""
+
+#: templates/member/get_player_data.html:49
+msgid "玩家今天房卡賣出總數"
+msgstr ""
+
+#: templates/member/get_player_data.html:50
+msgid "玩家註冊時間"
+msgstr ""
+
+#: templates/member/get_player_data.html:52
+msgid "玩家總玩時間"
+msgstr ""
+
+#: templates/member/get_player_data.html:54
+msgid "玩家邀請人"
+msgstr ""
+
+#: templates/member/get_player_data.html:61
+msgid "玩家最後7個登陸IP"
+msgstr ""
+
+#: templates/member/get_referral_data.html:20
+msgid "玩家填邀請時間"
+msgstr ""
+
+#: templates/member/get_referral_data.html:23
+#: templates/member/get_sales_data.html:29
+msgid "玩家房卡總數"
+msgstr ""
+
+#: templates/member/get_referral_data.html:24
+msgid "玩家總玩次數"
+msgstr ""
+
+#: templates/member/get_referral_data.html:40
+msgid "沒有邀請資料"
+msgstr ""
+
+#: templates/member/get_sales_data.html:22
+#, fuzzy
+#| msgid "房卡販售"
+msgid "最近房卡販售紀錄"
+msgstr "房卡販售"
+
+#: templates/member/get_sales_data.html:23
+#, fuzzy
+#| msgid "房卡販售"
+msgid "全部房卡販售紀錄"
+msgstr "房卡販售"
+
+#: templates/member/get_sales_data.html:30
+msgid "玩家最後購買房卡總數"
+msgstr ""
+
+#: templates/member/get_sales_data.html:31
+msgid "玩家最後購買房卡時間"
+msgstr ""
+
+#: templates/member/get_sales_data.html:32
+msgid "玩家最後登陸時間"
+msgstr ""
+
+#: templates/member/get_sales_data.html:47
+#: templates/member/get_suggestion_data.html:62
+#: templates/member/get_transaction_data.html:42
+msgid "沒有紀錄"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:9
+#: templates/member/get_suggestion_data.html:11
+#: templates/member/get_transaction_data.html:9
+msgid "你沒有權限瀏覽這個功能"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:13
+#: templates/member/get_transaction_data.html:13
+msgid "你是開發商"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:27
+msgid "手機號碼"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:28
+msgid "狀態"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:29
+msgid "來信時間"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:30
+msgid "最後登入時間"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:38
+#: templates/member/get_suggestion_data.html:52
+msgid "未閱讀"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:40
+#: templates/member/get_suggestion_data.html:54
+msgid "以閱讀"
+msgstr ""
+
+#: templates/member/get_suggestion_data.html:76
+msgid "返回"
+msgstr ""
+
+#: templates/member/get_transaction_data.html:11
+msgid "你是代理商"
+msgstr ""
+
+#: templates/member/get_transaction_data.html:28
+msgid "儲存金額"
+msgstr ""
+
+#: templates/member/get_transaction_data.html:29
+msgid "儲存日期"
+msgstr ""
+
+#: templates/member/sell_card.html:8 templates/member/sell_card.html:15
+#: templates/member/sell_card.html:44
+#, fuzzy
+#| msgid "房卡販售"
+msgid "販售"
+msgstr "房卡販售"
+
+#: templates/member/sell_card.html:14 templates/member/sell_card.html:31
+msgid "買家ID"
+msgstr ""
+
+#: templates/member/sell_card.html:19
+msgid "你賣了"
+msgstr ""
+
+#: templates/member/sell_card.html:19
+msgid "房卡給 "
+msgstr ""
+
+#: templates/member/sell_card.html:25
+msgid "確定"
+msgstr ""
+
+#: templates/member/sell_card.html:28
+msgid "輸入錯誤，此ID玩家並不存在"
+msgstr ""
+
+#: templates/member/sell_card.html:41
+msgid "請輸入販售數量"
+msgstr ""
+
+#: templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: templates/registration/logged_out.html:10
+msgid "Log in again"
+msgstr ""
+
+#: templates/registration/password_change_done.html:7
+#: templates/registration/password_change_form.html:8
+msgid "Password change"
+msgstr ""
+
+#: templates/registration/password_change_done.html:14
+msgid "Your password was changed."
+msgstr ""
+
+#: templates/registration/password_change_form.html:26
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: templates/registration/password_change_form.html:54
+#: templates/registration/password_reset_confirm.html:32
+msgid "Change my password"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:7
+#: templates/registration/password_reset_done.html:7
+#: templates/registration/password_reset_form.html:8
+msgid "Password reset"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:16
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:8
+msgid "Password reset confirmation"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:18
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "New password:"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:29
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:38
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:15
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:17
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/registration/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: templates/registration/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:16
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:22
+msgid "Email address:"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:25
+msgid "Reset my password"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Check memeber"
+#~ msgid "Check user"
+#~ msgstr "玩家查詢"
+
+#, fuzzy
+#~| msgid "Card sell record"
+#~ msgid "Recent card sell record"
+#~ msgstr "販售紀錄"
+
+#, fuzzy
+#~| msgid "Card sell record"
+#~ msgid "All card sell record"
+#~ msgstr "販售紀錄"
+
+#, fuzzy
+#~| msgid "Get activity data"
+#~ msgid "The month activity total"
+#~ msgstr "活躍紀錄"
+
+#, fuzzy
+#~| msgid "Get activity data"
+#~ msgid "Last month activity total"
+#~ msgstr "活躍紀錄"
+
+#, fuzzy
+#~| msgid "Buyer ID"
+#~ msgid "User ID"
+#~ msgstr "買家ID"
+
+#, fuzzy
+#~| msgid "Buyer Nickname"
+#~ msgid "User nickname"
+#~ msgstr "玩家暱稱"
+
+#, fuzzy
+#~| msgid "Get player data"
+#~ msgid "Cannot find this player data"
+#~ msgstr "用戶查詢"
+
+#, fuzzy
+#~| msgid "Buyer ID"
+#~ msgid "player ID"
+#~ msgstr "買家ID"
+
+#, fuzzy
+#~| msgid "Buyer Nickname"
+#~ msgid "player nickname"
+#~ msgstr "玩家暱稱"
+
+#, fuzzy
+#~| msgid "Today card sell total"
+#~ msgid "player own card total"
+#~ msgstr "今日販售"
+
+#, fuzzy
+#~| msgid "Today card sell total"
+#~ msgid "player club card total"
+#~ msgstr "今日販售"
+
+#, fuzzy
+#~| msgid "room cards to "
+#~ msgid "User card total"
+#~ msgstr "房卡給"
+
+#, fuzzy
+#~| msgid "Referral record"
+#~ msgid "No referred record"
+#~ msgstr "推廣紀錄"
+
+#, fuzzy
+#~| msgid "Today card sell total"
+#~ msgid "User last card purchase total"
+#~ msgstr "今日販售"
+
+#, fuzzy
+#~| msgid "Card sell record"
+#~ msgid "No sales record"
+#~ msgstr "販售紀錄"
+
+#~ msgid "This buyer does not exist"
+#~ msgstr "輸入錯誤，此ID玩家並不存在"
+
+#~ msgid "Buyer Nickname"
+#~ msgstr "玩家暱稱"
+
+#~ msgid "Input your total"
+#~ msgstr "請輸入販售數量"
+
+#~ msgid "Confirm sell"
+#~ msgstr "房卡販售"
+
+#~ msgid "Current own cards"
+#~ msgstr "目前持有房卡"
+
+#~ msgid "Card sell total"
+#~ msgstr "販售總數"
+
+#~ msgid "Monthly card sell total"
+#~ msgstr "當月販售"
+
+#~ msgid "Card sell"
+#~ msgstr "房卡販售"
+
+#~ msgid "Card purchase"
+#~ msgstr "房卡購買"
+
+#~ msgid "Activity record"
+#~ msgstr "活躍紀錄"
+
+#~ msgid "Buy card"
+#~ msgstr "房卡購買"
+
+#~ msgid "Sell card"
+#~ msgstr "販售"
+
+#~ msgid "Get referral data"
+#~ msgstr "推廣紀錄"
+
+#~ msgid "Get sales data"
+#~ msgstr "販售紀錄"
+
+#~ msgid "You sold"
+#~ msgstr "你賣了"
+
+#~ msgid "Confirm"
+#~ msgstr "確定"

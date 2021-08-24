@@ -1,0 +1,13 @@
+http://104.215.83.178:8010/gamecore/
+
+
+
+http://104.215.83.178:8010/gamecore/
+
+
+給其他遊戲紀錄抽水的，金幣會從玩家扣除給官方
+
+    # 玩家購買籌碼
+    path('player_buychips/<int:player_id>/<int:amount>/', PlayerBuyChipsView.as_view()),
+    # 玩家贖回籌碼
+    path('player_redeem/<int:player_id>/<int:amount>/',PlayerRedeemView.as_view()),

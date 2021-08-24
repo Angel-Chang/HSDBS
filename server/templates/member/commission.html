@@ -1,0 +1,131 @@
+{% extends "member/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- bootstrap datetimepicker -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}"/>
+<!-- bootstrap-table -->
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table.css' %}">
+<link rel="stylesheet" href="{% static 'member/vendor/bootstrap-table/css/bootstrap-table-pagejump.css' %}">
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'index' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li class="active"><a href="{% url 'commission' %}"> <i class="fas fa-hand-holding-water"></i>公司抽水紀錄</a></li>
+<li><a href="/member/goldflow/"> <i class="fas fa-landmark"></i>系統金流管理</a></li>
+<li><a href="/member/player_order/"> <i class="fas fa-file-invoice-dollar"></i>出金申請</a></li>
+<li><a href="#playerDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users"></i>玩家資訊 </a>
+  <ul id="playerDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/playerlist/">玩家列表</a></li>
+    <li><a href="/member/vip/">VIP組織圖</a></li>
+  </ul>
+</li>
+<li><a href="#gamesDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-trophy"></i>遊戲資訊 </a>
+  <ul id="gamesDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/game_room/">牌局紀錄</a></li>
+    <li><a href="/member/show_score/">玩家戰績</a></li>
+    <li><a href="/member/leaderboard/">玩家排行</a></li>
+  </ul>
+</li>
+<li><a href="{% url 'bulletin' %}"> <i class="fas fa-bullhorn"></i>公告管理</a></li>
+<li><a href="/member/block_list/"> <i class="fas fa-list-alt"></i>公司報表相關專區</a></li>
+<li><a href="#adminDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-star"></i>管理員資訊 </a>
+  <ul id="adminDropdown" class="collapse list-unstyled ">
+    <li><a href="/member/admin_list/">管理員清單</a></li>
+    <li><a href="/member/password_change/">修改密碼</a></li>
+  </ul>
+</li>
+{% endblock sidemenu %}
+
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <p class="my-3 text-danger">公司抽水紀錄</p>
+  <div class="row">
+    <div class="col-md">
+      <div class="card text-white bg-primary mb-3 rounded">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0">{{ this_year_company_bonus }}</h1>
+          <p class="card-text text-white">{{ current_year }} 年抽水金額</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="card text-white bg-info mb-3 rounded">
+        <div class="card-body">
+          <h1 class="card-title text-white mb-0">{{ this_month_company_bonus }}</h1>
+          <p class="card-text text-white">{{ current_year }} 年 {{ current_month }} 月抽水金額</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form action="" method="GET">
+    <div class="row mb-3">
+      <div class="col-md-9">
+        <div class="form-inline">
+          <!-- 選擇月份 -->
+          <div class="form-group">
+            <label for="checkMonth" class="mr-2 form-control-sm">選擇月份</label>
+            <input type="text" class="form-control " id="checkMonth" name = "checkMonth">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ml-auto">
+        <button type="button" style="width:100%" class="btn btn-primary btn-md" id="get_db_data">查詢</button>
+      </div>
+    </div>  
+  </form>
+  <div class="page-container">
+    <table id="table1">
+      <tbody>
+        {% for data1 in rs1 %}
+        <tr>
+          <td>{{ data1.chk_date }}</td>
+          <td>{{ data1.bonus }}</td>
+          <td>{{ data1.game_count }}</td>
+          <td>{{ data1.online_count }}</td>
+          <td>{{ data1.action }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <!-- ============================================================================================================ -->
+  <!-- 當日紀錄查詢  -->
+  <div class="modal" id="detail" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+          <section class="py-4 bg-transparent">
+            <div class="container">
+              <form id="detailform" action="" method="GET">
+                <input type="hidden" name="checkDate">
+                <table id="table2">
+                </table> 
+              </form>
+              <div class="text-center my-4">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">離開</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+<!-- bootstrap-table js -->
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/js/bootstrap-table-pagejump.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-table/locale/bootstrap-table-zh-TW.js' %}"></script>
+<!-- bootstrap datetimepicker -->
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/moment-with-locales.min.js' %}"></script>
+<script src="{% static 'member/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'member/js/datemonthpicker.js' %}"></script>
+<!-- custom js -->
+<script src="{% static 'member/js/commission.js' %}"></script>
+{% endblock extra_scripts %}

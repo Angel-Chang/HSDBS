@@ -1,0 +1,285 @@
+{% extends "member/playerbase.html" %}
+
+{% load static %}
+{% block extra_head %}
+<!-- jOrgChart -->
+<link rel="stylesheet" href="{% static 'member/vendor/jOrgChart/css/jquery.jOrgChart.css' %}">
+
+<style>
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+  }
+  .jOrgChart .node {
+    width: 100px;
+    height: 135px;
+    border-radius: 4px;
+    margin: 0 8px;
+    background-color: #fff;
+    position: relative;
+  }
+  .jOrgChart .node a{
+    display: block;
+    position: relative;
+    top:75px;
+  }
+  .jOrgChart .node .pic{
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    top: 0;
+    border-radius:50% ;
+    /* background: #006633; */
+  }
+  </style>
+
+{% endblock extra_head %}
+
+{% block sidemenu %}
+<li><a href="{% url 'playerindex' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="/member/player1/"> <i class="fas fa-user"></i>玩家資訊</a></li>
+<li class="active"><a href="/member/playervip/"><i class="fa fa-sitemap"> </i>VIP組織圖</a></li>
+{% endblock sidemenu %}
+
+{% block content %}
+<!-- page detail -->
+<div class="container-fluid px-3">
+  <p>
+    <span class="my-3 text-danger">VIP組織圖</span>
+  </p>
+  <!-- page info -->
+  <div class="page-container">
+    <div class="div">
+      <input type="hidden" id="player_id">
+      <input type="hidden" id="topseat_1">
+      <input type="hidden" id="topseat_2">
+      <input type="hidden" id="topseat_3">
+      <input type="hidden" id="topseat_4">
+      <input type="hidden" id="topseat_5">
+      <input type="hidden" id="topseat_6">
+      <input type="hidden" id="nowseat_1">
+      <input type="hidden" id="nowseat_2">
+      <input type="hidden" id="nowseat_3">
+      <input type="hidden" id="nowseat_4">
+      <input type="hidden" id="nowseat_5">
+      <input type="hidden" id="nowseat_6">
+      <input type="hidden" id="parent_seat_1">
+      <input type="hidden" id="parent_seat_2">
+      <input type="hidden" id="parent_seat_3">
+      <input type="hidden" id="parent_seat_4">
+      <input type="hidden" id="parent_seat_5">
+      <input type="hidden" id="parent_seat_6">
+
+    </div>
+    <!-- 組織圖 -->
+    <!-- tab -->
+    <ul class="nav nav-pills flex-column flex-sm-row nav-fill mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center active" id="p1-tab" data-toggle="pill" href="#p1" role="tab" aria-controls="p1" aria-selected="true"><h3>◈ 10</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p2-tab" data-toggle="pill" href="#p2" role="tab" aria-controls="p2" aria-selected="false"><h3>◈ 50</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p3-tab" data-toggle="pill" href="#p3" role="tab" aria-controls="p3" aria-selected="false"><h3>◈ 100</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p4-tab" data-toggle="pill" href="#p4" role="tab" aria-controls="p4" aria-selected="false"><h3>◈ 500</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p5-tab" data-toggle="pill" href="#p5" role="tab" aria-controls="p5" aria-selected="false"><h3>◈ 1000</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link flex-sm-fill text-sm-center" id="p6-tab" data-toggle="pill" href="#p6" role="tab" aria-controls="p6" aria-selected="false"><h3>◈2000</h3></a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="p1" role="tabpanel" aria-labelledby="p1-tab">
+        <!-- VIP10 -->
+        <div class = "row">
+          <div class="col-md-3">
+            <h2>配套樹節點總數：<span id='vip_type_count_1' name='vip_type_count_1'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>玩家樹節點數量：<span id='fans_count_1' name='fans_count_1'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>10層節點數量：<span id='level10_count_1' name='level10_count_1'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>推薦總人數：<span id='member_count_1' name='member_count_1'></span></h2>
+          </div>
+        </div>
+        <div class = "row justify-content-center">
+          <div id='jOrgChart_1' style="overflow:auto;"></div>
+        </div>
+        <div class = "row">
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer_1">上一級</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload_1">重新載入</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="p2" role="tabpanel" aria-labelledby="p2-tab">
+        <div class = "row">
+          <div class="col-md-3">
+            <h2>配套樹節點總數：<span id='vip_type_count_2' name='vip_type_count_2'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>玩家樹節點數量：<span id='fans_count_2' name='fans_count_2'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>10層節點數量：<span id='level10_count_2' name='level10_count_2'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>推薦總人數：<span id='member_count_2' name='member_count_2'></span></h2>
+          </div>
+        </div>
+        <div class = "row justify-content-center">
+          <div id='jOrgChart_2' style="overflow:auto;"></div>
+        </div>
+        <div class = "row">
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer_2">上一級</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload_2">重新載入</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="p3" role="tabpanel" aria-labelledby="p3-tab">
+        <!-- VIP100 -->
+        <div class = "row">
+          <div class="col-md-3">
+            <h2>配套樹節點總數：<span id='vip_type_count_3' name='vip_type_count_3'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>玩家樹節點數量：<span id='fans_count_3' name='fans_count_3'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>10層節點數量：<span id='level10_count_3' name='level10_count_3'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>推薦總人數：<span id='member_count_3' name='member_count_3'></span></h2>
+          </div>
+        </div>
+        <div class = "row justify-content-center">
+          <div id='jOrgChart_3' style="overflow:auto;"></div>
+        </div>
+        <div class = "row">
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer_3">上一級</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload_3">重新載入</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="p4" role="tabpanel" aria-labelledby="p4-tab">
+        <!-- VIP500 -->
+        <div class = "row">
+          <div class="col-md-3">
+            <h2>配套樹節點總數：<span id='vip_type_count_4' name='vip_type_count_4'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>玩家樹節點數量：<span id='fans_count_4' name='fans_count_4'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>10層節點數量：<span id='level10_count_4' name='level10_count_4'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>推薦總人數：<span id='member_count_4' name='member_count_4'></span></h2>
+          </div>
+        </div>
+        <div class = "row justify-content-center">
+          <div id='jOrgChart_4' style="overflow:auto;"></div>
+        </div>
+        <div class = "row">
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer_4">上一級</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload_4">重新載入</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="p5" role="tabpanel" aria-labelledby="p5-tab">
+        <!-- VIP1000 -->
+        <div class = "row">
+          <div class="col-md-3">
+            <h2>配套樹節點總數：<span id='vip_type_count_5' name='vip_type_count_5'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>玩家樹節點數量：<span id='fans_count_5' name='fans_count_5'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>10層節點數量：<span id='level10_count_5' name='level10_count_5'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>推薦總人數：<span id='member_count_5' name='member_count_5'></span></h2>
+          </div>
+        </div>
+        <div class = "row justify-content-center">
+          <div id='jOrgChart_5' style="overflow:auto;"></div>
+        </div>
+        <div class = "row">
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer_5">上一級</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload_5">重新載入</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="p6" role="tabpanel" aria-labelledby="p6-tab">
+        <!-- VIP2000 -->
+        <div class = "row">
+          <div class="col-md-3">
+            <h2>配套樹節點總數：<span id='vip_type_count_6' name='vip_type_count_6'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>玩家樹節點數量：<span id='fans_count_6' name='fans_count_6'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>10層節點數量：<span id='level10_count_6' name='level10_count_6'></span></h2>
+          </div>
+          <div class="col-md-3">
+            <h2>推薦總人數：<span id='member_count_6' name='member_count_6'></span></h2>
+          </div>
+        </div>
+        <div class = "row justify-content-center">
+          <div id='jOrgChart_6' style="overflow:auto;"></div>
+        </div>
+        <div class = "row">
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="upper_layer_6">上一級</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" style="width:100%" class="btn btn-info btn-md" id="reload_6">重新載入</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+
+<!-- jOrgChart -->
+<script src="{% static 'member/vendor/jOrgChart/js/jquery.jOrgChart.js' %}"></script>
+<!-- custom js -->
+<script>
+  var picsrc = "{% static 'member/img/' %}"
+</script>
+<!-- custom js -->
+<script src="{% static 'member/js/playervip.js' %}"></script>
+
+
+{% endblock extra_scripts %}

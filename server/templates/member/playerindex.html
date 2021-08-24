@@ -1,0 +1,14 @@
+{% extends "member/playerbase.html" %}
+
+{% block sidemenu %}
+<li class="active"><a href="{% url 'playerindex' %}"> <i class="fas fa-home"></i>首頁</a><li>          
+<li><a href="/member/player1/"> <i class="fas fa-user"></i>玩家資訊</a></li>
+<li><a href="/member/playervip/"><i class="fa fa-sitemap"> </i>VIP組織圖</a></li>
+
+{% endblock sidemenu %}
+
+{% block content %}
+<div class="container-fluid px-3">
+  <p class="my-3 text-danger">首頁</p>
+</div>
+{% endblock content %}
